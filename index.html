@@ -77,6 +77,17 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #475569;
         }
+
+        /* Scroll Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
     <link rel="icon" type="image/png" href="img/logo.png">
 </head>
@@ -93,14 +104,14 @@
                     <span class="tech-font text-xl md:text-2xl font-bold tracking-wider">TEAM CITRIX <span class="text-citrix-accent">#31007</span></span>
                 </div>
                 
-                <!-- Desktop Menu -->
+                <!-- Desktop Menu (Home link highlighted) -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                        <a href="#about" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+                        <a href="index.html" class="text-citrix-accent bg-citrix-light px-3 py-2 rounded-md text-sm font-medium">Home</a>
                         <a href="teamembers.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Team Members</a>
+                        <a href="robot.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Robot</a>
                         <a href="sponsors.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Sponsors</a>
-                        <a href="#contact" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-4 py-2 rounded-full text-sm font-bold">Contact</a>
+                        <a href="sponsors.html#contact" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-4 py-2 rounded-full text-sm font-bold">Contact</a>
                     </div>
                 </div>
 
@@ -113,12 +124,11 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
+        <!-- Mobile Menu Panel (Home link highlighted) -->
         <div id="mobile-menu" class="md:hidden hidden bg-citrix-light border-b border-gray-700 absolute w-full">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="#" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
-                <a href="teammembers.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team Members</a>
+                <a href="index.html" class="text-citrix-accent block px-3 py-2 rounded-md text-base font-medium font-bold">Home</a>
+                <a href="teamembers.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team Members</a>
                 <a href="sponsors.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sponsors</a>
                 <a href="#contact" class="text-citrix-accent block px-3 py-2 rounded-md text-base font-medium font-bold">Contact Us</a>
             </div>
@@ -135,14 +145,14 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="inline-block py-1 px-3 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6 animate-fade-in-up">FIRST Tech Challenge Team #31007</span>
-            <h1 class="text-5xl md:text-7xl font-black tech-font mb-6 tracking-tight">
+            <span class="reveal inline-block py-1 px-3 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6">FIRST Tech Challenge Team #31007</span>
+            <h1 class="reveal text-5xl md:text-7xl font-black tech-font mb-6 tracking-tight">
                 BUILDING THE <br><span class="text-gradient">FUTURE</span>
             </h1>
-            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+            <p class="reveal mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
                 Team Citrix is a passionate group of students dedicated to engineering, programming, and STEM excellence. We don't just build robots; we build leaders.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <div class="reveal flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#about" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-all px-8 py-3 rounded-lg font-bold text-lg shadow-lg shadow-blue-500/25">
                     Our Mission
                 </a>
@@ -158,17 +168,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
-                    <div class="text-left">
+                    <div class="text-left reveal">
                         <h2 class="text-3xl md:text-4xl font-bold tech-font text-white mb-2">About Us</h2>
                         <div class="w-20 h-1 bg-citrix-accent rounded-full"></div>
                     </div>
-                    <p class="text-gray-300 text-lg leading-relaxed">
+                    <p class="reveal text-gray-300 text-lg leading-relaxed">
                         Founded with a vision to innovate, Team Citrix #31007 participates in the FIRST Tech Challenge (FTC). Our team combines creativity with technical skills to design, build, and program robots that compete in complex alliances.
                     </p>
-                    <p class="text-gray-300 text-lg leading-relaxed">
+                    <p class="reveal text-gray-300 text-lg leading-relaxed">
                         Beyond the competition field, we are committed to outreach—spreading the message of STEM to our local community and mentoring the next generation of innovators.
                     </p>
-                    <div class="grid grid-cols-2 gap-4 mt-8">
+                    <div class="grid grid-cols-2 gap-4 mt-8 reveal">
                         <div class="bg-citrix-light p-4 rounded-lg border border-gray-700 text-center">
                             <i class="fas fa-cogs text-3xl text-citrix-accent mb-2"></i>
                             <h3 class="font-bold">Engineering</h3>
@@ -179,11 +189,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative">
+                <div class="relative reveal">
                     <div class="absolute inset-0 bg-citrix-accent/20 blur-3xl rounded-full"></div>
                     <!-- Placeholder for a robot or team image -->
                     <div class="relative bg-gray-800 rounded-xl overflow-hidden aspect-video border border-gray-700 shadow-2xl flex items-center justify-center group">
-                         <i class="text-6xl text-gray-600 group-hover:text-citrix-accent transition-colors duration-500"><img src="img/robotpic.png"></i>
+                         <i class="text-6xl text-gray-600 group-hover:text-citrix-accent transition-colors duration-500"><img src="img/robotpic.png" alt="Robot"></i>
                          <p class="absolute bottom-4 text-gray-500 text-sm"></p>
                     </div>
                 </div>
@@ -191,16 +201,13 @@
         </div>
     </section>
 
-
-
-    
     <!-- Footer -->
     <footer class="bg-black py-12 border-t border-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col md:flex-row justify-between items-center reveal">
                 <div class="mb-6 md:mb-0 text-center md:text-left">
                     <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
-                         <div class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-xs font-bold">C</div>
+                         <div class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-xs font-bold"><img src="img/logo.png" alt="C"></div>
                          <span class="tech-font text-xl font-bold">TEAM CITRIX</span>
                     </div>
                     <p class="text-gray-500 text-sm">Inspiring the next generation of engineers through FIRST Tech Challenge.</p>
@@ -220,7 +227,7 @@
                     </a>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-900 text-center text-gray-600 text-sm">
+            <div class="mt-8 pt-8 border-t border-gray-900 text-center text-gray-600 text-sm reveal">
                 &copy; 2025 Team Citrix #31007. All rights reserved.
             </div>
         </div>
@@ -228,42 +235,8 @@
 
     <!-- JavaScript logic -->
     <script>
-        // Data derived from provided URL
-
         // Placeholder for when images fail to load
         const fallbackImage = "https://ui-avatars.com/api/?background=1e293b&color=38bdf8&font-size=0.4&name=";
-
-        function renderTeam() {
-            const grid = document.getElementById('team-grid');
-            
-            teamMembers.forEach(member => {
-                const card = document.createElement('div');
-                card.className = "bg-citrix-light rounded-xl overflow-hidden border border-gray-700 card-hover transition-all duration-300 group";
-                
-                card.innerHTML = `
-                    <div class="h-64 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition-colors z-10"></div>
-                        <img 
-                            src="${member.img}" 
-                            alt="${member.name}" 
-                            class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                            onerror="this.onerror=null; this.src='${fallbackImage}${member.name}';"
-                        >
-                    </div>
-                    <div class="p-6 relative">
-                        <div class="absolute -top-10 right-4 w-12 h-12 bg-citrix-accent rounded-full flex items-center justify-center text-citrix-dark shadow-lg">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-1 group-hover:text-citrix-accent transition-colors">${member.name}</h3>
-                        <p class="text-citrix-accent text-sm font-semibold uppercase tracking-wider mb-3">FTC Team Member</p>
-                        <div class="mt-4 pt-4 border-t border-gray-700 flex justify-end">
-                            <a href="#" class="text-gray-500 hover:text-white transition-colors"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
 
         // Mobile Menu Toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
@@ -271,8 +244,29 @@
             menu.classList.toggle('hidden');
         });
 
+        // Initialize Scroll Animation
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+        }
+
         // Initialize
-        document.addEventListener('DOMContentLoaded', renderTeam);
+        document.addEventListener('DOMContentLoaded', () => {
+            // No renderTeam here as index doesn't have the grid, but we init animations
+            initScrollAnimations();
+        });
     </script>
 </body>
 </html>
