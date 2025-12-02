@@ -52,11 +52,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo/Branding -->
-                <div class="flex-shrink-0">
-                    <a href="index.html" class="text-3xl font-tech font-bold text-citrix-accent tracking-widest">
-                        CITRIX <span class="text-white text-lg font-sans font-normal">#31007</span>
-                    </a>
+                <div class="flex items-center space-x-2">
+                  <a href="index.html" class="flex items-center">
+                    <img src="img/logo.png" alt="Citrix Logo" class="h-10 w-auto">
+                    <span class="text-3xl font-tech font-bold text-citrix-accent tracking-widest">Team Citrix</span>
+                    <span class="text-white text-lg font-sans font-normal">#31007</span>
+                  </a>
                 </div>
+
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-4">
@@ -106,14 +109,14 @@
                      alt="Primary view of the competition robot, Sentinel" 
                      class="w-full rounded-lg shadow-xl"
                      onerror="this.onerror=null; this.src='https://placehold.co/1024x576/1e293b/38bdf8?text=Main+Robot+View'">
-                <p class="text-sm text-gray-400 mt-2">Current iteration of the robot (Rev. 3.0)</p>
+                <p class="text-sm text-gray-400 mt-2">Current iteration of the robot</p>
             </div>
         </section>
 
         <!-- Technical Specifications Summary -->
         <section class="py-12 border-b border-citrix-light">
             <h2 class="text-4xl font-tech font-bold text-center mb-10 text-white reveal">
-                Key Specifications
+                Key Specs
             </h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 bg-citrix-light p-6 rounded-xl shadow-lg reveal delay-200">
                 
@@ -125,7 +128,7 @@
                 
                 <div class="text-center">
                     <i class="fas fa-microchip text-3xl text-citrix-accent mb-2"></i>
-                    <p class="text-lg font-semibold font-tech">Control</p>
+                    <p class="text-lg font-semibold font-tech">Programming</p>
                     <p class="text-gray-400">Java / FTC SDK</p>
                 </div>
 
@@ -137,8 +140,8 @@
 
                 <div class="text-center">
                     <i class="fas fa-eye text-3xl text-citrix-accent mb-2"></i>
-                    <p class="text-lg font-semibold font-tech">Vision</p>
-                    <p class="text-gray-400">TensorFlow & AprilTags</p>
+                    <p class="text-lg font-semibold font-tech">Auto</p>
+                    <p class="text-gray-400">Gets as many points as possible</p>
                 </div>
             </div>
         </section>
@@ -152,7 +155,7 @@
                 <div class="order-2 md:order-1">
                     <h3 class="text-3xl font-tech font-bold text-citrix-accent mb-4">The Omnidirectional Drivetrain</h3>
                     <p class="text-gray-300 mb-4">
-                        We utilize a 4-wheel mecanum drive system, powered by four NeveRest 40 motors. This design allows for omnidirectional movement, enabling precise lateral positioning and faster field navigation crucial for competitive matches. The chassis is constructed from custom-cut aluminum extrusion for maximum rigidity.
+                        We utilize a 4-wheel mecanum drive system. This design allows for omnidirectional movement, enabling precise lateral positioning and faster field navigation crucial for competitive matches. The chassis is constructed from aluminum extrusion for maximum rigidity.
                     </p>
                     <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
                         <li>Motors: 4x NeveRest 40</li>
@@ -186,7 +189,6 @@
                     <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
                         <li>Actuation: 1x 5202 GoBILDA Motor</li>
                         <li>Extension: 30 inches of vertical travel</li>
-                        <li>Precision: PID control for accurate height stopping</li>
                     </ul>
                 </div>
             </div>
@@ -196,14 +198,12 @@
                 <div class="order-2 md:order-1">
                     <h3 class="text-3xl font-tech font-bold text-citrix-accent mb-4">Control System & Software</h3>
                     <p class="text-gray-300 mb-4">
-                        The robot runs on a Rev Control Hub and is programmed entirely in Java using the FTC SDK. We heavily implement custom classes for drive control and state machines for reliable autonomous routines. Autonomous navigation relies on both AprilTags and Tensor Flow object detection.
-                    </p>
-                    <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                        The robot runs on a Rev Control Hub and is programmed entirely in Java using the FTC SDK. 
                         <li>Hardware: Rev Control Hub, 5x Servos, 8x Motors</li>
                         <li>Programming: Advanced Odometry, Vision-based Auto</li>
                         <li>Source Code: Available on GitHub (Link Placeholder)</li>
                     </ul>
-                    <a href="#" class="mt-4 inline-flex items-center text-citrix-accent hover:text-citrix-hover font-semibold transition duration-300">
+                    <a href="https://github.com/FireModMaker12/FTC-2025---2026-Team-Citrix-Decode" class="mt-4 inline-flex items-center text-citrix-accent hover:text-citrix-hover font-semibold transition duration-300">
                         View Codebase <i class="ml-2 fas fa-code"></i>
                     </a>
                 </div>
@@ -240,7 +240,7 @@
                 <!-- Branding -->
                 <div class="col-span-2 md:col-span-1 reveal">
                     <a href="index.html" class="text-2xl font-tech font-bold text-citrix-accent tracking-widest">
-                        CITRIX #31007
+                        Team Citrix #31007
                     </a>
                     <p class="mt-2 text-sm text-gray-400">
                         Empowering students through technology and teamwork.
@@ -262,9 +262,8 @@
                 <div class="reveal delay-200">
                     <h4 class="text-md font-semibold text-white mb-3">Resources</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300">FTC Game Manual</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300">Media Kit</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300">Contact Us</a></li>
+                        <li><a href="https://ftc-resources.firstinspires.org/ftc/game/manual" class="text-gray-400 hover:text-citrix-accent transition duration-300">FTC Game Manual</a></li>
+                        <li><a href="sponsors.html#contact" class="text-gray-400 hover:text-citrix-accent transition duration-300">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -321,3 +320,4 @@
 </body>
 
 </html>
+
