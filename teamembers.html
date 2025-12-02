@@ -62,6 +62,17 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #475569;
         }
+
+        /* Scroll Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-citrix-dark text-white overflow-x-hidden">
@@ -78,14 +89,14 @@
                     <span class="tech-font text-xl md:text-2xl font-bold tracking-wider">TEAM CITRIX <span class="text-citrix-accent">#31007</span></span>
                 </div>
                 
-                <!-- Desktop Menu -->
+                <!-- Desktop Menu (About Us link removed) -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
                         <a href="index.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                        <a href="#" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">About Us</a>
                         <a href="teamembers.html" class="text-citrix-accent bg-citrix-light px-3 py-2 rounded-md text-sm font-medium">Team Members</a>
+                        <a href="robot.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Robot</a>
                         <a href="sponsors.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Sponsors</a>
-                        <a href="#" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-4 py-2 rounded-full text-sm font-bold">Contact</a>
+                        <a href="sponsors.html#contact" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-4 py-2 rounded-full text-sm font-bold">Contact</a>
                     </div>
                 </div>
 
@@ -98,11 +109,10 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
+        <!-- Mobile Menu Panel (About Us link removed) -->
         <div id="mobile-menu" class="md:hidden hidden bg-citrix-light border-b border-gray-700 absolute w-full">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="#" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
                 <a href="teamembers.html" class="text-citrix-accent block px-3 py-2 rounded-md text-base font-medium font-bold">Team Members</a>
                 <a href="sponsors.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sponsors</a>
             </div>
@@ -119,14 +129,14 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="inline-block py-1 px-3 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6">FIRST Tech Challenge Team #31007</span>
-            <h1 class="text-5xl md:text-7xl font-black tech-font mb-6 tracking-tight">
+            <span class="reveal inline-block py-1 px-3 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6">FIRST Tech Challenge Team #31007</span>
+            <h1 class="reveal text-5xl md:text-7xl font-black tech-font mb-6 tracking-tight">
                 MEET THE <span class="text-gradient">INNOVATORS</span>
             </h1>
-            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+            <p class="reveal mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
                 We are a passionate group of students dedicated to engineering, programming, and STEM excellence. Together, we build more than just robots.
             </p>
-            <div class="flex justify-center gap-4">
+            <div class="reveal flex justify-center gap-4">
                 <a href="#team" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-all px-8 py-3 rounded-lg font-bold text-lg shadow-lg shadow-blue-500/25">
                     View Roster
                 </a>
@@ -140,7 +150,7 @@
     <!-- Team Section -->
     <section id="team" class="py-20 bg-citrix-light/30 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal">
                 <h2 class="text-3xl md:text-4xl font-bold tech-font mb-4">Our Members</h2>
                 <div class="w-24 h-1 bg-citrix-accent mx-auto rounded-full"></div>
             </div>
@@ -156,20 +166,20 @@
     <section class="py-20 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20 z-0"></div>
         <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
-            <h2 class="text-3xl font-bold mb-6 tech-font">Interested in Supporting Us?</h2>
-            <p class="text-gray-300 mb-8 text-lg">
+            <h2 class="reveal text-3xl font-bold mb-6 tech-font">Interested in Supporting Us?</h2>
+            <p class="reveal text-gray-300 mb-8 text-lg">
                 Robotics requires resources, mentorship, and community support. Join us on our journey to the championship.
             </p>
-            <button class="bg-white text-citrix-dark hover:bg-gray-100 transition-colors px-8 py-3 rounded-full font-bold shadow-xl">
+            <a class="reveal bg-white text-citrix-dark hover:bg-gray-100 transition-colors px-8 py-3 rounded-full font-bold shadow-xl" href="sponsors.html#contact">
                 Become a Sponsor
-            </button>
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-black py-12 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col md:flex-row justify-between items-center reveal">
                 <div class="mb-6 md:mb-0 text-center md:text-left">
                     <span class="tech-font text-2xl font-bold block mb-2">TEAM CITRIX</span>
                     <p class="text-gray-500 text-sm">Inspiring the next generation of engineers.</p>
@@ -189,29 +199,89 @@
                     </a>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-900 text-center text-gray-600 text-sm">
+            <div class="mt-8 pt-8 border-t border-gray-900 text-center text-gray-600 text-sm reveal">
                 &copy; 2025 Team Citrix #31007. All rights reserved.
             </div>
         </div>
     </footer>
 
     <!-- JavaScript logic -->
-    <script>
-        // Data derived from provided URL
+<script>
+        // 1. UPDATED DATA: Added 'role' and 'description' for each member
         const teamMembers = [
-            { name: "Sai", img: "img/saipicture.jpg" },
-            { name: "Karthikeya", img: "img/darkikeyapic.jpg" },
-            { name: "Abhinav", img: "img/chipapapi.jpg" },
-            { name: "Ujwel", img: "img/ujwelbeta.jpg" },
-            { name: "Divit", img: "img/divitthepivot.png" },
-            { name: "Pranav", img: "img/jinu.jpg" },
-            { name: "Vishwajeet", img: `img/vishywahsy.png` },
-            { name: "Ishan", img: "img/tallkindergartener.jpg" },
-            { name: "Keagen", img: "img/personwedonttrust.jpg" },
-            { name: "Dhruva", img: "img/Dhruva_the_goat.jpg" },
-            { name: "Laksh", img: "img/someone.jpg" }
+            { 
+                name: "Sai", 
+                role: "Outreach",
+                description: "I am the outreach team, I manage the community connections, team branding and the youtube channel.",
+                img: "img/saipicture.jpg" 
+            },
+            { 
+                name: "Karthikeya", 
+                role: "(insert here)",
+                description: "insethere",
+                img: "img/darkikeyapic.jpg" 
+            },
+            { 
+                name: "Abhinav", 
+                role: "Builder",
+                description: "Focuses on chassis design and structural integrity.",
+                img: "img/chipapapi.jpg" 
+            },
+            { 
+                name: "Ujwel", 
+                role: "Driver",
+                description: "Main operator during tele-op competitions.",
+                img: "img/ujwelbeta.jpg" 
+            },
+            { 
+                name: "Divit", 
+                role: "Mechanic",
+                description: "Ensures all moving parts are maintained and efficient.",
+                img: "img/divitthepivot.png" 
+            },
+            { 
+                name: "Pranav", 
+                role: "Programmer (TELEOP) and Human Player",
+                description: "Works on tele-op controls and input handling.",
+                img: "img/jinu.jpg" 
+            },
+            { 
+                name: "Vishwajeet", 
+                role: "Designer",
+                description: "Helps with CAD designs and visual presentations.",
+                img: `img/vishywahsy.png` 
+            },
+            { 
+                name: "Ishan", 
+                role: "Programmer (AUTO)",
+                description: "",
+                img: "img/tallkindergartener.jpg" 
+            },
+            { 
+                name: "Keagen", 
+                role: "Builder",
+                description: "Assists with assembly and field element construction.",
+                img: "img/personwedonttrust.jpg" 
+            },
+            { 
+                name: "Dhruva", 
+                role: "Programmer (auto)",
+                description: "I handle the autonomous programming for our robot using Java.",
+                img: "img/Dhruva_the_goat.jpg" 
+            },
+            { 
+                name: "Laksh", 
+                role: "Programmer (Teleop) and Driver",
+                description: "I am the main programmer for teleop mode, making the neccessary java code and this website.",
+                img: "img/someone.jpg" 
+            },
+            { 
+                name: "Smitha", 
+                role: "Coach",
+                description: "Guides the team through engineering challenges.",
+                img: "" 
+            }
         ];
-
 
         // Placeholder for when images fail to load
         const fallbackImage = "https://ui-avatars.com/api/?background=1e293b&color=38bdf8&font-size=0.4&name=";
@@ -221,8 +291,10 @@
             
             teamMembers.forEach(member => {
                 const card = document.createElement('div');
-                card.className = "bg-citrix-light rounded-xl overflow-hidden border border-gray-700 card-hover transition-all duration-300 group";
+                // ADDED 'reveal' class here
+                card.className = "reveal bg-citrix-light rounded-xl overflow-hidden border border-gray-700 card-hover transition-all duration-300 group";
                 
+                // 2. UPDATED HTML TEMPLATE: Now uses member.role and member.description
                 card.innerHTML = `
                     <div class="h-64 overflow-hidden relative">
                         <div class="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition-colors z-10"></div>
@@ -238,13 +310,15 @@
                             <i class="fas fa-robot"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-1 group-hover:text-citrix-accent transition-colors">${member.name}</h3>
-                        <p class="text-citrix-accent text-sm font-semibold uppercase tracking-wider mb-3">FTC Team Member</p>
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            Dedicated to building, coding, and driving success for Team #31007.
+                        
+                        <p class="text-citrix-accent text-sm font-semibold uppercase tracking-wider mb-3">
+                            ${member.role || 'Team Member'}
                         </p>
-                        <div class="mt-4 pt-4 border-t border-gray-700 flex justify-end">
-                            <a href="#" class="text-gray-500 hover:text-white transition-colors"><i class="fab fa-github"></i></a>
-                        </div>
+                        
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            ${member.description || 'Dedicated member of Team #31007.'}
+                        </p>
+                        
                     </div>
                 `;
                 grid.appendChild(card);
@@ -257,9 +331,29 @@
             menu.classList.toggle('hidden');
         });
 
+        // Initialize Scroll Animation
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+        }
+
         // Initialize
-        document.addEventListener('DOMContentLoaded', renderTeam);
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTeam();
+            initScrollAnimations();
+        });
     </script>
-    
 </body>
 </html>
