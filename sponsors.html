@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Citrix #31007 | Home</title>
+    <title>Team Citrix #31007 | Sponsors</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -77,6 +77,17 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #475569;
         }
+
+        /* Scroll Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
     <link rel="icon" type="image/png" href="img/logo.png">
 </head>
@@ -93,14 +104,14 @@
                     <span class="tech-font text-xl md:text-2xl font-bold tracking-wider">TEAM CITRIX <span class="text-citrix-accent">#31007</span></span>
                 </div>
                 
-                <!-- Desktop Menu -->
+                <!-- Desktop Menu (About Us link removed) -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                        <a href="#about" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+                        <a href="index.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</a>
                         <a href="teamembers.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Team Members</a>
-                        <a href="#sponsors" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Sponsors</a>
-                        <a href="#contact" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-4 py-2 rounded-full text-sm font-bold">Contact</a>
+                        <a href="robot.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Robot</a>
+                        <a href="sponsors.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Sponsors</a>
+                        <a href="sponsors.html#contact" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-4 py-2 rounded-full text-sm font-bold">Contact</a>
                     </div>
                 </div>
 
@@ -113,11 +124,10 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
+        <!-- Mobile Menu Panel (About Us link removed) -->
         <div id="mobile-menu" class="md:hidden hidden bg-citrix-light border-b border-gray-700 absolute w-full">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="index.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="#" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
                 <a href="teammembers.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team Members</a>
                 <a href="#sponsors" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sponsors</a>
                 <a href="#contact" class="text-citrix-accent block px-3 py-2 rounded-md text-base font-medium font-bold">Contact Us</a>
@@ -135,14 +145,14 @@
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="inline-block py-1 px-3 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6 animate-fade-in-up">FIRST Tech Challenge Team #31007</span>
-            <h1 class="text-5xl md:text-7xl font-black tech-font mb-6 tracking-tight">
+            <span class="reveal inline-block py-1 px-3 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6">FIRST Tech Challenge Team #31007</span>
+            <h1 class="reveal text-5xl md:text-7xl font-black tech-font mb-6 tracking-tight">
                 BUILDING THE <br><span class="text-gradient">FUTURE</span>
             </h1>
-            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+            <p class="reveal mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
                 Team Citrix is a passionate group of students dedicated to engineering, programming, and STEM excellence. We don't just build robots; we build leaders.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <div class="reveal flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#about" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-all px-8 py-3 rounded-lg font-bold text-lg shadow-lg shadow-blue-500/25">
                     Our Mission
                 </a>
@@ -153,19 +163,18 @@
         </div>
     </header>
 
-   
     <!-- Sponsors Section -->
     <section id="sponsors" class="py-20 bg-citrix-dark border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold tech-font mb-4 section-header">Our Sponsors</h2>
-            <p class="text-gray-400 mb-12 max-w-2xl mx-auto">
+            <h2 class="reveal text-3xl md:text-4xl font-bold tech-font mb-4 section-header">Our Sponsors</h2>
+            <p class="reveal text-gray-400 mb-12 max-w-2xl mx-auto">
                 We are incredibly grateful for the generous support of our partners. Their contributions make our robotics journey possible.
             </p>
             
             <!-- Updated Sponsor Logos/Names -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center opacity-90">
                 <!-- Argosy (FTC Sim) -->
-                <div class="bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-colors h-32 flex items-center justify-center border border-gray-700 shadow-lg">
+                <div class="reveal bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-colors h-32 flex items-center justify-center border border-gray-700 shadow-lg">
                     <div class="text-center">
                         <span class="text-xl font-bold text-citrix-accent tech-font">ARGOSY</span>
                         <p class="text-xs text-gray-400">(FTC Simulator)</p>
@@ -173,22 +182,22 @@
                 </div>
 
                 <!-- Qualcomm -->
-                <div class="bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-colors h-32 flex items-center justify-center border border-gray-700 shadow-lg">
+                <div class="reveal bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-colors h-32 flex items-center justify-center border border-gray-700 shadow-lg">
                     <span class="text-2xl font-black text-white tech-font tracking-wider">QUALCOMM</span>
                 </div>
 
                 <!-- Open Placeholder 3 -->
-                <div class="bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-colors h-32 flex items-center justify-center border border-gray-700 shadow-lg">
+                <div class="reveal bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-colors h-32 flex items-center justify-center border border-gray-700 shadow-lg">
                     <span class="text-xl font-bold text-gray-500">SPONSOR 3</span>
                 </div>
                 
                 <!-- Open Placeholder 4 -->
-                <div class="bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-colors h-32 flex items-center justify-center border border-gray-700 shadow-lg">
+                <div class="reveal bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-colors h-32 flex items-center justify-center border border-gray-700 shadow-lg">
                     <span class="text-xl font-bold text-gray-500">SPONSOR 4</span>
                 </div>
             </div>
             
-            <div class="mt-12">
+            <div class="reveal mt-12">
                 <a href="#contact" class="inline-flex items-center text-citrix-accent hover:text-white font-semibold transition-colors">
                     Become a Sponsor <i class="fas fa-arrow-right ml-2"></i>
                 </a>
@@ -199,28 +208,33 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 relative overflow-hidden bg-gradient-to-b from-citrix-light to-citrix-dark border-t border-gray-800">
         <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
-            <h2 class="text-3xl font-bold mb-6 tech-font">Contact Us</h2>
-            <p class="text-gray-300 mb-8 text-lg">
+            <h2 class="reveal text-3xl font-bold mb-6 tech-font">Contact Us</h2>
+            <p class="reveal text-gray-300 mb-8 text-lg">
                 Interested in mentoring, sponsoring, or just want to say hi? We'd love to hear from you.
             </p>
             
-            <div class="bg-citrix-dark/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 shadow-2xl">
-                <form class="space-y-4 text-left">
+            <div class="reveal bg-citrix-dark/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 shadow-2xl">
+                <form 
+                    action="https://formspree.io/f/xzzngden" 
+                    method="POST" 
+                    class="space-y-4 text-left"
+                >
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-1">Name</label>
-                            <input type="text" class="w-full bg-citrix-light border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:border-citrix-accent text-white" placeholder="Your Name">
+                            <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="w-full bg-citrix-light border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:border-citrix-accent text-white" placeholder="Your Name" required>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-1">Email</label>
-                            <input type="email" class="w-full bg-citrix-light border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:border-citrix-accent text-white" placeholder="your@email.com">
+                            <label for="_replyto" class="block text-sm font-medium text-gray-400 mb-1">Email</label>
+                            <input type="email" id="_replyto" name="_replyto" class="w-full bg-citrix-light border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:border-citrix-accent text-white" placeholder="your@email.com" required>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-1">Message</label>
-                        <textarea rows="4" class="w-full bg-citrix-light border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:border-citrix-accent text-white" placeholder="How can we help?"></textarea>
+                        <label for="message" class="block text-sm font-medium text-gray-400 mb-1">Message</label>
+                        <textarea rows="4" id="message" name="message" class="w-full bg-citrix-light border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:border-citrix-accent text-white" placeholder="How can we help?" required></textarea>
                     </div>
-                    <button type="button" class="w-full bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-8 py-3 rounded-lg font-bold shadow-xl">
+                    
+                    <button type="submit" class="w-full bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-8 py-3 rounded-lg font-bold shadow-xl">
                         Send Message
                     </button>
                 </form>
@@ -228,14 +242,13 @@
         </div>
     </section>
 
-    
     <!-- Footer -->
     <footer class="bg-black py-12 border-t border-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col md:flex-row justify-between items-center reveal">
                 <div class="mb-6 md:mb-0 text-center md:text-left">
                     <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
-                         <div class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-xs font-bold">C</div>
+                         <div class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-xs font-bold"><img src="img/logo.png" alt="C"></div>
                          <span class="tech-font text-xl font-bold">TEAM CITRIX</span>
                     </div>
                     <p class="text-gray-500 text-sm">Inspiring the next generation of engineers through FIRST Tech Challenge.</p>
@@ -255,7 +268,7 @@
                     </a>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-900 text-center text-gray-600 text-sm">
+            <div class="mt-8 pt-8 border-t border-gray-900 text-center text-gray-600 text-sm reveal">
                 &copy; 2025 Team Citrix #31007. All rights reserved.
             </div>
         </div>
@@ -263,42 +276,8 @@
 
     <!-- JavaScript logic -->
     <script>
-        // Data derived from provided URL
-
         // Placeholder for when images fail to load
         const fallbackImage = "https://ui-avatars.com/api/?background=1e293b&color=38bdf8&font-size=0.4&name=";
-
-        function renderTeam() {
-            const grid = document.getElementById('team-grid');
-            
-            teamMembers.forEach(member => {
-                const card = document.createElement('div');
-                card.className = "bg-citrix-light rounded-xl overflow-hidden border border-gray-700 card-hover transition-all duration-300 group";
-                
-                card.innerHTML = `
-                    <div class="h-64 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition-colors z-10"></div>
-                        <img 
-                            src="${member.img}" 
-                            alt="${member.name}" 
-                            class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                            onerror="this.onerror=null; this.src='${fallbackImage}${member.name}';"
-                        >
-                    </div>
-                    <div class="p-6 relative">
-                        <div class="absolute -top-10 right-4 w-12 h-12 bg-citrix-accent rounded-full flex items-center justify-center text-citrix-dark shadow-lg">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-1 group-hover:text-citrix-accent transition-colors">${member.name}</h3>
-                        <p class="text-citrix-accent text-sm font-semibold uppercase tracking-wider mb-3">FTC Team Member</p>
-                        <div class="mt-4 pt-4 border-t border-gray-700 flex justify-end">
-                            <a href="#" class="text-gray-500 hover:text-white transition-colors"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
 
         // Mobile Menu Toggle
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
@@ -306,8 +285,28 @@
             menu.classList.toggle('hidden');
         });
 
+        // Initialize Scroll Animation
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+        }
+
         // Initialize
-        document.addEventListener('DOMContentLoaded', renderTeam);
+        document.addEventListener('DOMContentLoaded', () => {
+            initScrollAnimations();
+        });
     </script>
     
 </body>
