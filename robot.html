@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Citrix #31007 | Robot Overview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Team logo mentioned by user -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        citrix: {
+                            dark: '#0f172a',
+                            light: '#1e293b',
+                            accent: '#38bdf8', // Light blue/cyan
+                            hover: '#0ea5e9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'] // Tech-looking font for headers
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom CSS for smoother reveal animations, matching other files */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-citrix-dark text-white min-h-screen">
+
+    <!-- Header & Navigation (Robot link active) -->
+    <header class="sticky top-0 z-50 bg-citrix-dark shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo/Branding -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-3xl font-tech font-bold text-citrix-accent tracking-widest">
+                        CITRIX <span class="text-white text-lg font-sans font-normal">#31007</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.html" class="text-white hover:text-citrix-accent px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                    <a href="sponsors.html" class="text-white hover:text-citrix-accent px-3 py-2 rounded-md text-sm font-medium transition duration-300">Sponsors</a>
+                    <a href="teamembers.html" class="text-white hover:text-citrix-accent px-3 py-2 rounded-md text-sm font-medium transition duration-300">Team</a>
+                    <!-- Current Page Link -->
+                    <a href="robot.html" class="text-citrix-accent bg-citrix-light px-3 py-2 rounded-md text-sm font-medium transition duration-300 shadow-inner shadow-citrix-dark/50">Robot</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-citrix-accent hover:text-white hover:bg-citrix-light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-citrix-accent" aria-controls="mobile-menu" aria-expanded="false">
+                        <i class="fas fa-bars h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-citrix-light">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-citrix-dark/50">Home</a>
+                <a href="sponsors.html" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-citrix-dark/50">Sponsors</a>
+                <a href="teamembers.html" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-citrix-dark/50">Team</a>
+                <!-- Current Page Link -->
+                <a href="robot.html" class="text-citrix-accent bg-citrix-dark/50 block px-3 py-2 rounded-md text-base font-medium">Robot</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        
+        <!-- Robot Hero Section -->
+        <section class="text-center mb-16">
+            <h1 class="text-5xl sm:text-6xl font-tech font-extrabold text-citrix-accent reveal">
+                Sentinel: The 2025 Competition Robot
+            </h1>
+            <p class="mt-4 text-xl text-gray-300 max-w-4xl mx-auto reveal">
+                Engineered for maximum efficiency, precision, and reliability in the CenterStage challenge.
+            </p>
+            
+            <!-- Main Robot Image Placeholder -->
+            <div class="mt-10 max-w-3xl mx-auto reveal delay-100 p-2 bg-citrix-light rounded-xl shadow-2xl border border-citrix-accent/50">
+                <img src="https://placehold.co/1024x576/1e293b/38bdf8?text=Main+Robot+View+-+Sentinel" 
+                     alt="Primary view of the competition robot, Sentinel" 
+                     class="w-full rounded-lg shadow-xl"
+                     onerror="this.onerror=null; this.src='https://placehold.co/1024x576/1e293b/38bdf8?text=Main+Robot+View'">
+                <p class="text-sm text-gray-400 mt-2">Current iteration of the robot (Rev. 3.0)</p>
+            </div>
+        </section>
+
+        <!-- Technical Specifications Summary -->
+        <section class="py-12 border-b border-citrix-light">
+            <h2 class="text-4xl font-tech font-bold text-center mb-10 text-white reveal">
+                Key Specifications
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 bg-citrix-light p-6 rounded-xl shadow-lg reveal delay-200">
+                
+                <div class="text-center">
+                    <i class="fas fa-grip-lines text-3xl text-citrix-accent mb-2"></i>
+                    <p class="text-lg font-semibold font-tech">Drivetrain</p>
+                    <p class="text-gray-400">4-Wheel Mecanum</p>
+                </div>
+                
+                <div class="text-center">
+                    <i class="fas fa-microchip text-3xl text-citrix-accent mb-2"></i>
+                    <p class="text-lg font-semibold font-tech">Control</p>
+                    <p class="text-gray-400">Java / FTC SDK</p>
+                </div>
+
+                <div class="text-center">
+                    <i class="fas fa-weight-hanging text-3xl text-citrix-accent mb-2"></i>
+                    <p class="text-lg font-semibold font-tech">Weight</p>
+                    <p class="text-gray-400">16.5 lbs (Max 19)</p>
+                </div>
+
+                <div class="text-center">
+                    <i class="fas fa-eye text-3xl text-citrix-accent mb-2"></i>
+                    <p class="text-lg font-semibold font-tech">Vision</p>
+                    <p class="text-gray-400">TensorFlow & AprilTags</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Subsystem Deep Dive -->
+        <section class="py-12 space-y-16">
+            
+            <!-- 1. Drivetrain -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border p-8 rounded-xl border-citrix-light bg-citrix-light shadow-2xl reveal">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-3xl font-tech font-bold text-citrix-accent mb-4">The Omnidirectional Drivetrain</h3>
+                    <p class="text-gray-300 mb-4">
+                        We utilize a 4-wheel mecanum drive system, powered by four NeveRest 40 motors. This design allows for omnidirectional movement, enabling precise lateral positioning and faster field navigation crucial for competitive matches. The chassis is constructed from custom-cut aluminum extrusion for maximum rigidity.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                        <li>Motors: 4x NeveRest 40</li>
+                        <li>Wheels: 100mm Mecanum</li>
+                        <li>Speed: 1.5 meters per second</li>
+                    </ul>
+                </div>
+                <!-- Drivetrain Image Placeholder -->
+                <div class="order-1 md:order-2">
+                    <img src="https://placehold.co/450x300/0f172a/38bdf8?text=Drivetrain+Subsystem" 
+                         alt="Image of the Mecanum Drivetrain" 
+                         class="w-full rounded-lg shadow-xl border border-citrix-accent/30"
+                         onerror="this.onerror=null; this.src='https://placehold.co/450x300/0f172a/38bdf8?text=Drivetrain'">
+                </div>
+            </div>
+
+            <!-- 2. Scoring Mechanism (Flipped Layout) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border p-8 rounded-xl border-citrix-light bg-citrix-light shadow-2xl reveal delay-200">
+                <!-- Scoring Mechanism Image Placeholder -->
+                <div class="order-1">
+                    <img src="https://placehold.co/450x300/0f172a/38bdf8?text=Scoring+Mechanism" 
+                         alt="Image of the Scoring Mechanism / Linear Slide" 
+                         class="w-full rounded-lg shadow-xl border border-citrix-accent/30"
+                         onerror="this.onerror=null; this.src='https://placehold.co/450x300/0f172a/38bdf8?text=Scoring+Arm'">
+                </div>
+                <div class="order-2">
+                    <h3 class="text-3xl font-tech font-bold text-citrix-accent mb-4">High-Reach Linear Slide</h3>
+                    <p class="text-gray-300 mb-4">
+                        Our primary scoring mechanism is a 3-stage continuous linear slide actuated by a high-torque DC motor. It's designed to reach the top-most position of the scoring area (the 'Backdrop') with minimal deflection. The unique gripper tip ensures secure pixel release.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                        <li>Actuation: 1x 5202 GoBILDA Motor</li>
+                        <li>Extension: 30 inches of vertical travel</li>
+                        <li>Precision: PID control for accurate height stopping</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 3. Control System & Code -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border p-8 rounded-xl border-citrix-light bg-citrix-light shadow-2xl reveal delay-400">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-3xl font-tech font-bold text-citrix-accent mb-4">Control System & Software</h3>
+                    <p class="text-gray-300 mb-4">
+                        The robot runs on a Rev Control Hub and is programmed entirely in Java using the FTC SDK. We heavily implement custom classes for drive control and state machines for reliable autonomous routines. Autonomous navigation relies on both AprilTags and Tensor Flow object detection.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                        <li>Hardware: Rev Control Hub, 5x Servos, 8x Motors</li>
+                        <li>Programming: Advanced Odometry, Vision-based Auto</li>
+                        <li>Source Code: Available on GitHub (Link Placeholder)</li>
+                    </ul>
+                    <a href="#" class="mt-4 inline-flex items-center text-citrix-accent hover:text-citrix-hover font-semibold transition duration-300">
+                        View Codebase <i class="ml-2 fas fa-code"></i>
+                    </a>
+                </div>
+                <!-- Control System Image Placeholder -->
+                <div class="order-1 md:order-2">
+                    <img src="https://placehold.co/450x300/0f172a/38bdf8?text=Control+System+Diagram" 
+                         alt="Image of the Control Hub and Wiring" 
+                         class="w-full rounded-lg shadow-xl border border-citrix-accent/30"
+                         onerror="this.onerror=null; this.src='https://placehold.co/450x300/0f172a/38bdf8?text=Wiring+Diagram'">
+                </div>
+            </div>
+
+        </section>
+        
+        <!-- Call to Action / Documentation Link -->
+        <section class="text-center py-16 mt-12 bg-citrix-light rounded-xl shadow-2xl reveal delay-500">
+            <h2 class="text-3xl font-tech font-bold text-white mb-4">
+                View Full Documentation
+            </h2>
+            <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+                For complete details on our design process, iteration history, and performance statistics, check out our Engineering Notebook.
+            </p>
+            <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-citrix-dark bg-citrix-accent hover:bg-citrix-hover transition duration-300 ease-in-out transform hover:scale-105">
+                Download Notebook (PDF) <i class="ml-2 fas fa-file-pdf"></i>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-citrix-light border-t border-citrix-dark/50 mt-12">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Branding -->
+                <div class="col-span-2 md:col-span-1 reveal">
+                    <a href="index.html" class="text-2xl font-tech font-bold text-citrix-accent tracking-widest">
+                        CITRIX #31007
+                    </a>
+                    <p class="mt-2 text-sm text-gray-400">
+                        Empowering students through technology and teamwork.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="reveal delay-100">
+                    <h4 class="text-md font-semibold text-white mb-3">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="text-gray-400 hover:text-citrix-accent transition duration-300">Home</a></li>
+                        <li><a href="sponsors.html" class="text-gray-400 hover:text-citrix-accent transition duration-300">Sponsors</a></li>
+                        <li><a href="teamembers.html" class="text-gray-400 hover:text-citrix-accent transition duration-300">Team</a></li>
+                        <li><a href="robot.html" class="text-citrix-accent transition duration-300">Robot</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="reveal delay-200">
+                    <h4 class="text-md font-semibold text-white mb-3">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300">FTC Game Manual</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300">Media Kit</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div class="reveal delay-300">
+                    <h4 class="text-md font-semibold text-white mb-3">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-900 text-center text-gray-600 text-sm reveal">
+                &copy; 2025 Team Citrix #31007. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // Placeholder for when images fail to load
+        const fallbackImage = "https://ui-avatars.com/api/?background=1e293b&color=38bdf8&font-size=0.4&name=";
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Initialize Scroll Animation (Matching the logic in other files)
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            initScrollAnimations();
+        });
+    </script>
+</body>
+</html>
