@@ -48,44 +48,53 @@
 <body class="bg-citrix-dark text-white min-h-screen">
 
     <!-- Header & Navigation (Robot link active) -->
-    <header class="sticky top-0 z-50 bg-citrix-dark shadow-xl">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo/Branding -->
-                <div class="flex-shrink-0">
-                    <a href="index.html" class="text-3xl font-tech font-bold text-citrix-accent tracking-widest">
-                        <img src=img/logo.png> CITRIX <span class="text-white text-lg font-sans font-normal">#31007</span>
-                    </a>
-                </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="index.html" class="text-white hover:text-citrix-accent px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
-                    <a href="sponsors.html" class="text-white hover:text-citrix-accent px-3 py-2 rounded-md text-sm font-medium transition duration-300">Sponsors</a>
-                    <a href="teamembers.html" class="text-white hover:text-citrix-accent px-3 py-2 rounded-md text-sm font-medium transition duration-300">Team</a>
-                    <!-- Current Page Link -->
-                    <a href="robot.html" class="text-citrix-accent bg-citrix-light px-3 py-2 rounded-md text-sm font-medium transition duration-300 shadow-inner shadow-citrix-dark/50">Robot</a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-citrix-accent hover:text-white hover:bg-citrix-light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-citrix-accent" aria-controls="mobile-menu" aria-expanded="false">
-                        <i class="fas fa-bars h-6 w-6"></i>
-                    </button>
-                </div>
-            </div>
+    <!-- Navbar -->
+<nav class="fixed w-full z-50 bg-citrix-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300" id="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      
+      <!-- Logo / Branding -->
+      <div class="flex-shrink-0 flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/20">
+          <img src="img/logo.png" alt="C">
         </div>
-
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="md:hidden hidden bg-citrix-light">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-citrix-dark/50">Home</a>
-                <a href="sponsors.html" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-citrix-dark/50">Sponsors</a>
-                <a href="teamembers.html" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-citrix-dark/50">Team</a>
-                <!-- Current Page Link -->
-                <a href="robot.html" class="text-citrix-accent bg-citrix-dark/50 block px-3 py-2 rounded-md text-base font-medium">Robot</a>
-            </div>
+        <span class="tech-font text-xl md:text-2xl font-bold tracking-wider">
+          TEAM CITRIX <span class="text-citrix-accent">#31007</span>
+        </span>
+      </div>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-8">
+          <a href="index.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</a>
+          <a href="teammembers.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Team Members</a>
+          <a href="robot.html" class="text-citrix-accent bg-citrix-light px-3 py-2 rounded-md text-sm font-medium">Robot</a>
+          <a href="sponsors.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Sponsors</a>
+          <a href="sponsors.html#contact" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-4 py-2 rounded-full text-sm font-bold">Contact Us</a>
         </div>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-citrix-light border-b border-gray-700 absolute w-full">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="index.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+      <a href="teammembers.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team Members</a>
+      <a href="robot.html" class="text-citrix-accent block px-3 py-2 rounded-md text-base font-medium font-bold">Robot</a>
+      <a href="sponsors.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sponsors</a>
+      <a href="sponsors.html#contact" class="text-citrix-accent block px-3 py-2 rounded-md text-base font-medium font-bold">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
     </header>
 
     <!-- Main Content -->
@@ -97,7 +106,7 @@
                 Tigger: The 2025 Competition Robot
             </h1>
             <p class="mt-4 text-xl text-gray-300 max-w-4xl mx-auto reveal">
-              Our robot is made for offensive play and rapid scoring, beating everyone in the ring.
+              Our robot is made for offensive play and rapid scoring, beating everyone in the ring. With quick play and fast movement
             </p>
             
             <!-- Main Robot Image Placeholder -->
@@ -106,7 +115,7 @@
                      alt="Primary view of the competition robot, Tigger" 
                      class="w-full rounded-lg shadow-xl"
                      onerror="this.onerror=null; this.src='https://placehold.co/1024x576/1e293b/38bdf8?text=Main+Robot+View'">
-                <p class="text-sm text-gray-400 mt-2">Our current robot.</p>
+                <p class="text-sm text-gray-400 mt-2">Our current robot, Tiggerbot.</p>
             </div>
         </section>
 
@@ -152,11 +161,11 @@
                 <div class="order-2 md:order-1">
                     <h3 class="text-3xl font-tech font-bold text-citrix-accent mb-4">The Omnidirectional Drivetrain</h3>
                     <p class="text-gray-300 mb-4">
-                        We utilize a 4-wheel mecanum drive system, allowing us to speed across the field with no delay whatsoever. 
+                        We utilize a 4-wheel mecanum drive system, allowing us to speed across the field with no delay whatsoever and flipping into shooting position quickly. 
                     </p>
                     <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
                         <!-- <li>Motors --> <!-- use this when we know what motors we are using for omnidirectional-->
-                        <li>Wheels: 100mm Mecanum</li>
+                        <li>Wheels: Mecanum(Omnidirectional)</li>
                         <!--<li>Speed: 1.5 meters per second</li>-->
                     </ul>
                 </div>
@@ -196,10 +205,10 @@
                 <div class="order-2 md:order-1">
                     <h3 class="text-3xl font-tech font-bold text-citrix-accent mb-4">Control System & Software</h3>
                     <p class="text-gray-300 mb-4">
-                        The robot runs on a Rev Control Hub and is programmed entirely in Java using the FTC SDK. We heavily implement custom classes for drive control and state machines for reliable autonomous routines. Autonomous navigation relies on both AprilTags and Tensor Flow object detection.
+                        The robot runs on a Rev Control Hub and is programmed entirely in Java using the FTC SDK. We heavily implement custom classes for drive control and state machines for reliable autonomous routines.
                     </p>
                     <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
-                        <li>Hardware: Rev Control Hub, 2x Servos, 4x Motors</li>
+                        <li>Hardware: Rev Control Hub, 2x Servos, 6x Motors</li>
                         <li>Programming: Fixed Auto</li>
                         <li><a href=https://github.com/FireModMaker12/FTC-2025---2026-Team-Citrix-Decode>Source Code: Available on GitHub</a></li>
                     </ul>
@@ -220,7 +229,7 @@
 
     </main>
 
-    <!-- Footer -->
+    <!-- Footer --> <!-- If you are reading this GET OFF THE INSPECT TAB ISTG -->
     <footer class="bg-citrix-light border-t border-citrix-dark/50 mt-12">
         <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -249,8 +258,7 @@
                 <div class="reveal delay-200">
                     <h4 class="text-md font-semibold text-white mb-3">Resources</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300">FTC Game Manual</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300">Media Kit</a></li>
+                        <li><a href="https://ftc-resources.firstinspires.org/ftc/game/manual" class="text-gray-400 hover:text-citrix-accent transition duration-300">FTC Game Manual</a></li>
                         <li><a href="sponsors.html#contact" class="text-gray-400 hover:text-citrix-accent transition duration-300">Contact Us</a></li>
                     </ul>
                 </div>
@@ -259,11 +267,27 @@
                 <div class="reveal delay-300">
                     <h4 class="text-md font-semibold text-white mb-3">Connect</h4>
                     <div class="flex space-x-4">
+                        <!-- add our insta plz and github -->
                         <a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
                         <a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-citrix-accent transition duration-300"><i class="fab fa-youtube text-xl"></i></a>
+                        <a href="https://www.youtube.com/@TeamCitrix" class="text-gray-400 hover:text-citrix-accent transition duration-300"><i class="fab fa-youtube text-xl"></i></a>
                     </div>
                 </div>
+                                <div class="flex space-x-6">
+                    <a href="https://www.youtube.com/@TeamCitrix" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors text-2xl">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://ftc-events.firstinspires.org/2025/team/31007" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                        <i class="fa-duotone fa-solid fa-robot"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-500 transition-colors text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                  <a href="mailto:teamcitrix31007@gmail.com" class="text-gray-400 hover:text-blue-600 transition-colors text-2xl">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+
             </div>
             <div class="mt-8 pt-8 border-t border-gray-900 text-center text-gray-600 text-sm reveal">
                 &copy; 2025 Team Citrix #31007. All rights reserved.
@@ -309,4 +333,37 @@
 
 </html>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- hey, you.
+
+yes, you
+
+nice job, you wasted 5s econds of ur life scrolling here.
+
+congrats.
+
+hope you liked Tigger
+
+
+
+bye
+have a nice life
+
+
+-Lakshya 
+
+
+-->
 
