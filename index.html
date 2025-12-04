@@ -300,7 +300,7 @@
     <script>
   async function loadVideoData() {
     try {
-      const response = await fetch('video.json'); // path to your JSON file
+      const response = await fetch('json/video.json'); // path to your JSON file
       const data = await response.json();
 
       document.getElementById('video-title').textContent = data.title;
