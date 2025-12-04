@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Citrix #31007 | Season Schedule</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        citrix: {
+                            dark: '#0f172a',
+                            light: '#1e293b',
+                            accent: '#38bdf8', // Light blue/cyan
+                            hover: '#0ea5e9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'] // Tech-looking font for headers
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .tech-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+
+        /* Scroll Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Timeline specific styles */
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: #334155;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-line::before {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-citrix-dark text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-citrix-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/20">
+                        <img src="img/logo.png" alt="C">
+                    </div>
+                    <span class="tech-font text-xl md:text-2xl font-bold tracking-wider">TEAM CITRIX <span class="text-citrix-accent">#31007</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="teamembers.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Team Members</a>
+                        <a href="robot.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Robot</a>
+                        <!-- Active Schedule Link -->
+                        <a href="schedule.html" class="text-citrix-accent bg-citrix-light px-3 py-2 rounded-md text-sm font-medium">Schedule</a>
+                        <a href="sponsors.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Sponsors</a>
+                        <a href="sponsors.html#contact" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-4 py-2 rounded-full text-sm font-bold">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden hidden bg-citrix-light border-b border-gray-700 absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="teamembers.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team Members</a>
+                <a href="robot.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Robot</a>
+                <a href="schedule.html" class="text-citrix-accent block px-3 py-2 rounded-md text-base font-medium font-bold">Schedule</a>
+                <a href="sponsors.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sponsors</a>
+                <a href="sponsors.html#contact" class="text-citrix-accent block px-3 py-2 rounded-md text-base font-medium font-bold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="relative pt-32 pb-16 overflow-hidden">
+        <!-- Background decorative blobs -->
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full z-0 pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div class="absolute top-20 right-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="reveal inline-block py-1 px-3 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6">2025 - 2026 Season</span>
+            <h1 class="reveal text-5xl md:text-7xl font-black tech-font mb-6 tracking-tight">
+                SEASON <span class="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">SCHEDULE</span>
+            </h1>
+            <p class="reveal mt-4 max-w-2xl mx-auto text-xl text-gray-400">
+                Follow Team Citrix #31007 as we compete in the FiT-Central X-Stream League.
+            </p>
+        </div>
+    </header>
+
+    <!-- Timeline Section -->
+    <section class="py-16 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Timeline Container -->
+            <div class="relative timeline-line">
+                
+                <!-- Event 1: Meet 1 (Completed) -->
+                <div class="reveal relative mb-16 md:flex md:justify-between items-center group w-full">
+                    <!-- Date (Left on Desktop) -->
+                    <div class="hidden md:block w-5/12 text-right pr-8">
+                        <span class="text-citrix-accent font-tech text-xl font-bold">November 8, 2025</span>
+                        <p class="text-gray-500 text-sm">League Meet</p>
+                    </div>
+
+                    <!-- Dot (Center) -->
+                    <div class="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-citrix-dark border-4 border-citrix-accent z-10 shadow-[0_0_15px_rgba(56,189,248,0.5)]"></div>
+
+                    <!-- Content (Right on Desktop) -->
+                    <div class="pl-12 md:pl-8 md:w-5/12">
+                        <!-- Mobile Date -->
+                        <div class="md:hidden mb-1">
+                            <span class="text-citrix-accent font-tech font-bold">Nov 8, 2025</span>
+                        </div>
+                        <div class="bg-citrix-light border border-gray-700 p-6 rounded-xl hover:border-citrix-accent transition-colors shadow-lg">
+                            <h3 class="text-xl font-bold text-white mb-2">FiT-Central X-Stream League B Meet 1</h3>
+                            <p class="text-gray-400 text-sm mb-2">
+                                We competed in 5 qualification matches, ending with a record of 2-3-0. A great learning experience to kick off the competition season.
+                            </p>
+                            <span class="inline-block mt-1 px-2 py-1 bg-green-900/30 text-green-400 text-xs rounded border border-green-500/30">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2: Meet 2 (Upcoming) -->
+                <div class="reveal relative mb-16 md:flex md:flex-row-reverse md:justify-between items-center group w-full">
+                    <!-- Date (Right on Desktop due to reverse) -->
+                    <div class="hidden md:block w-5/12 text-left pl-8">
+                        <span class="text-citrix-accent font-tech text-xl font-bold">December 6, 2025</span>
+                        <p class="text-gray-500 text-sm">League Meet</p>
+                    </div>
+
+                    <!-- Dot -->
+                    <div class="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-citrix-dark border-4 border-white z-10 animate-pulse"></div>
+
+                    <!-- Content (Left on Desktop due to reverse) -->
+                    <div class="pl-12 md:pr-8 md:pl-0 md:w-5/12 md:text-right">
+                        <!-- Mobile Date -->
+                        <div class="md:hidden mb-1">
+                            <span class="text-citrix-accent font-tech font-bold">Dec 6, 2025</span>
+                        </div>
+                        <div class="bg-citrix-light border border-gray-700 p-6 rounded-xl border-t-4 border-t-citrix-accent shadow-2xl relative md:text-left">
+                             <div class="absolute -top-3 right-4 md:right-auto md:left-4 bg-citrix-accent text-citrix-dark font-bold text-xs px-2 py-1 rounded">UPCOMING</div>
+                            <h3 class="text-xl font-bold text-white mb-2">FiT-Central X-Stream League B Meet 2</h3>
+                            <p class="text-gray-400 text-sm">
+                                Our second league meet. We've made improvements to our mechanisms and are ready to score even higher!
+                            </p>
+                            <span class="inline-block mt-3 px-2 py-1 bg-blue-900/30 text-blue-400 text-xs rounded border border-blue-500/30">Scheduled</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3: Meet 3 (Upcoming) -->
+                <div class="reveal relative mb-16 md:flex md:justify-between items-center group w-full">
+                    <div class="hidden md:block w-5/12 text-right pr-8">
+                        <span class="text-citrix-accent font-tech text-xl font-bold">January 10, 2026</span>
+                        <p class="text-gray-500 text-sm">League Meet</p>
+                    </div>
+
+                    <div class="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-citrix-dark border-4 border-gray-600 group-hover:border-citrix-accent transition-colors z-10"></div>
+
+                    <div class="pl-12 md:pl-8 md:w-5/12">
+                        <div class="md:hidden mb-1">
+                            <span class="text-citrix-accent font-tech font-bold">Jan 10, 2026</span>
+                        </div>
+                        <div class="bg-citrix-light border border-gray-700 p-6 rounded-xl hover:border-citrix-accent transition-colors shadow-lg">
+                            <h3 class="text-xl font-bold text-white mb-2">FiT-Central X-Stream League B Meet 3</h3>
+                            <p class="text-gray-400 text-sm">
+                                The final regular season meet. This is our last chance to accumulate league points before the tournament.
+                            </p>
+                            <span class="inline-block mt-3 px-2 py-1 bg-blue-900/30 text-blue-400 text-xs rounded border border-blue-500/30">Scheduled</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4: Tournament (Upcoming) -->
+                <div class="reveal relative mb-16 md:flex md:flex-row-reverse md:justify-between items-center group w-full">
+                    <div class="hidden md:block w-5/12 text-left pl-8">
+                        <span class="text-citrix-accent font-tech text-xl font-bold">January 31, 2026</span>
+                        <p class="text-gray-500 text-sm">League Tournament</p>
+                    </div>
+
+                    <div class="absolute left-[20px] md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-citrix-dark border-4 border-gray-600 group-hover:border-citrix-accent transition-colors z-10"></div>
+
+                    <div class="pl-12 md:pr-8 md:pl-0 md:w-5/12 md:text-right">
+                        <div class="md:hidden mb-1">
+                            <span class="text-citrix-accent font-tech font-bold">Jan 31, 2026</span>
+                        </div>
+                        <div class="bg-citrix-light border border-gray-700 p-6 rounded-xl hover:border-citrix-accent transition-colors shadow-lg md:text-left opacity-90 group-hover:opacity-100">
+                            <h3 class="text-xl font-bold text-white mb-2">FiT-Central X-Stream League Tournament</h3>
+                            <p class="text-gray-400 text-sm">
+                                The League Championship! We will compete against all teams in our league for awards and advancement to the Regional Championship.
+                            </p>
+                            <span class="inline-block mt-3 px-2 py-1 bg-purple-900/30 text-purple-400 text-xs rounded border border-purple-500/30">Target Goal</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center reveal">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
+                         <div class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-xs font-bold"><img src="img/logo.png" alt="C"></div>
+                         <span class="tech-font text-xl font-bold">TEAM CITRIX</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Inspiring the next generation of engineers through FIRST Tech Challenge.</p>
+                </div>
+                
+                <!-- Updated Quick Links in Footer to include Schedule -->
+                <div class="hidden md:flex flex-col text-sm text-gray-500 space-y-2 mr-8">
+                    <span class="font-bold text-gray-300">Quick Links</span>
+                    <a href="index.html" class="hover:text-citrix-accent">Home</a>
+                    <a href="schedule.html" class="hover:text-citrix-accent">Schedule</a>
+                    <a href="robot.html" class="hover:text-citrix-accent">Robot</a>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="https://www.youtube.com/@TeamCitrix" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors text-2xl">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://ftc-events.firstinspires.org/2025/team/31007" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                        <i class="fa-duotone fa-solid fa-robot"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-500 transition-colors text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                  <a href="mailto:teamcitrix31007@gmail.com" class="text-gray-400 hover:text-blue-600 transition-colors text-2xl">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-900 text-center text-gray-600 text-sm reveal">
+                &copy; 2025 Team Citrix #31007. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // Placeholder for when images fail to load
+        const fallbackImage = "https://ui-avatars.com/api/?background=1e293b&color=38bdf8&font-size=0.4&name=";
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Initialize Scroll Animation
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            initScrollAnimations();
+        });
+    </script>
+</body>
+</html>
