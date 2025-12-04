@@ -88,6 +88,23 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
     </style>
     <link rel="icon" type="image/png" href="img/logo.png">
 </head>
@@ -198,6 +215,20 @@
             </div>
         </div>
     </section>
+    <!-- YouTube Section -->
+<section id="youtube" class="py-20 bg-citrix-light/10 border-t border-gray-800/50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <h2 id="video-title" class="tech-font text-3xl md:text-4xl font-bold mb-6 text-gradient"></h2>
+      <p id="video-description" class="text-gray-400 mb-10"></p>
+      <div class="flex justify-center">
+          <div class="video-container rounded-xl overflow-hidden shadow-2xl border border-gray-700">
+              <iframe id="video-iframe" allowfullscreen></iframe>
+          </div>
+      </div>
+  </div>
+</section>
+
+
 
     <!-- Footer -->
     <footer class="bg-black py-12 border-t border-gray-900">
@@ -266,6 +297,23 @@
             initScrollAnimations();
         });
     </script>
+    <script>
+  async function loadVideoData() {
+    try {
+      const response = await fetch('video.json'); // path to your JSON file
+      const data = await response.json();
+
+      document.getElementById('video-title').textContent = data.title;
+      document.getElementById('video-description').textContent = data.description;
+      document.getElementById('video-iframe').src = data.embedUrl;
+    } catch (error) {
+      console.error("Error loading video data:", error);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', loadVideoData);
+</script>
+
 </body>
 </html>
 
