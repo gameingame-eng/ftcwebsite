@@ -1,0 +1,28 @@
+[
+  {
+    "date": "2025-11-08",
+    "type": "League Meet",
+    "title": "FiT-Central X-Stream League B Meet 1",
+    "description": "We competed in 5 qualification matches, ending with a record of 2-3-0. A great learning experience to kick off the competition season.",
+    "status": "Completed"
+  },
+  {
+    "date": "2025-12-06",
+    "type": "League Meet",
+    "title": "FiT-Central X-Stream League B Meet 2",
+    "description": "Our second league meet. We've made improvements to our mechanisms and are ready to score even higher!"
+  },
+  {
+    "date": "2026-01-10",
+    "type": "League Meet",
+    "title": "FiT-Central X-Stream League B Meet 3",
+    "description": "The final regular season meet. This is our last chance to accumulate league points before the tournament."
+  },
+  {
+    "date": "2026-01-31",
+    "type": "League Tournament",
+    "title": "FiT-Central X-Stream League Tournament",
+    "description": "The League Championship! We will compete against all teams in our league for awards and advancement to the Regional Championship.",
+    "status": "Target Goal"
+  }
+]
