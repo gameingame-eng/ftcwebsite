@@ -10,8 +10,9 @@
     "date": "2025-12-06",
     "type": "League Meet",
     "title": "FiT-Central X-Stream League B Meet 2",
-    "description": "Our second league meet. We've made improvements to our mechanisms and are ready to score even higher!"
-  },
+    "description": "Our second league meet. We've made improvements to our mechanisms and are ready to score even higher!",
+    "status": "Completed"
+},
   {
     "date": "2026-01-10",
     "type": "League Meet",
