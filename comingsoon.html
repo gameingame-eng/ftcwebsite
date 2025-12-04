@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Team Citrix #31007</title>
+    <link rel="stylesheet" href="comingsoon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-citrix-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/20">
+                        <img src="img/logo.png" alt="Team Citrix logo">
+                    </div>
+                    <span class="tech-font text-xl md:text-2xl font-bold tracking-wider">TEAM CITRIX<span class="text-citrix-accent"> #31007</span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Coming Soon Section -->
+    <section class="flex items-center justify-center min-h-screen text-center px-6">
+        <div class="reveal">
+            <h1 class="tech-font text-5xl md:text-7xl font-black mb-6 text-gradient">COMING SOON</h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+                We’re working hard behind the scenes to bring you something exciting. Stay tuned!
+            </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 mt-8 reveal">
+    <a href="index.html" class="button-glow">
+        <i class="fas fa-home mr-2"></i> Back to Home
+    </a>
+    <a href="https://www.youtube.com/@TeamCitrix" target="_blank" class="button-outline">
+        <i class="fab fa-youtube text-red-500 mr-2"></i> YouTube
+    </a>
+    <a href="sponsors.html#contact" class="button-glow">
+        <i class="fas fa-phone mr-2"></i> Contact Us
+    </a>
+</div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-gray-900 text-center">
+        <div class="reveal">
+            <p class="text-gray-500 text-sm">© 2025 Team Citrix #31007. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll Animation -->
+    <script>
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+        }
+
+        document.addEventListener('DOMContentLoaded', initScrollAnimations);
+    </script>
+</body>
+</html>
