@@ -209,156 +209,159 @@
         </div>
     </footer>
 
-    <!-- JavaScript logic -->
+// JavaScript logic
 <script>
-        // 1. UPDATED DATA: Added 'role' and 'description' for each member
-        const teamMembers = [
-            { 
-                name: "Sai", 
-                role: "Outreach",
-                description: "I am the outreach team, I manage the community connections, team branding and the youtube channel.",
-                img: "img/saipicture.jpg" 
-            },
-            { 
-                name: "Karthikeya", 
-                role: "Builder/Outreach",
-                description: "I assist in building and outreach for the team.",
-                img: "img/darkikeyapic.jpg" 
-            },
-            { 
-                name: "Abhinav", 
-                role: "Builder",
-                description: "Focuses on chassis design and structural integrity.",
-                img: "img/chipapapi.jpg" 
-            },
-            { 
-                name: "Ujwel", 
-                role: "Lead Builder",
-                description: "I built most of the robot and i coordnate my buddies to help me out",
-                img: "img/ujwelbeta.jpg" 
-            },
-            { 
-                name: "Divit", 
-                role: "Driver and Outreach",
-                description: "I assist Sai in managing everything outreach and I am a driver for Team Citrix. I enjoy driving and I also sometimes help out with building of the robot.",
-                img: "img/divitthepivot.png" 
-            },
-            { 
-                name: "Pranav", 
-                role: "Programmer (TELEOP) and Human Player",
-                description: "Works on tele-op controls and input handling, also helps coordnate the enitre team and suggests ideas for Outreach, Programming, and Building.",
-                img: "img/jinu.jpg" 
-            },
-            { 
-                name: "Vishwajeet", 
-                role: "Designer",
-                description: "I designed the orginal robot in CAD and we built off of that CAD project.",
-                img: `img/vishywahsy.png` 
-            },
-            { 
-                name: "Ishan", 
-                role: "Programmer (AUTO)",
-                description: "I program the auto section of the match, which we designed to maximize point collection.",
-                img: "img/tallkindergartener.jpg" 
-            },
-            { 
-                name: "Kegan", 
-                role: "Builder & tester",
-                description: "Assists with assembly and field element construction. Also tests the robot with Laksh and Divit.",
-                img: "img/personwedonttrust.jpg" 
-            },
-            { 
-                name: "Dhruva", 
-                role: "Programmer (auto)",
-                description: "I handle the autonomous programming for our robot using Java with Ishan.",
-                img: "img/Dhruva_the_goat.jpg" 
-            },
-            { 
-                name: "Laksh", 
-                role: "Programmer (Teleop) and Driver",
-                description: "I am the main programmer for teleop mode, making the neccessary java code and this website.",
-                img: "img/someone.jpg" 
-            },
-            { 
-                name: "Smitha", 
-                role: "Coach",
-                description: "Guides the team through engineering and programming challenges, and also steers the team through tough times.",
-                img: "" 
-            }
-        ];
+    // Placeholder for when images fail to load
+    const fallbackImage = "https://ui-avatars.com/api/?background=1e293b&color=38bdf8&font-size=0.4&name=";
 
-        // Placeholder for when images fail to load
-        const fallbackImage = "https://ui-avatars.com/api/?background=1e293b&color=38bdf8&font-size=0.4&name=";
+    // --- Team Data (Kept as is) ---
+    const teamMembers = [
+        { 
+            name: "Sai", 
+            role: "Outreach",
+            description: "I am the outreach team, I manage the community connections, team branding and the youtube channel.",
+            img: "img/saipicture.jpg" 
+        },
+        { 
+            name: "Karthikeya", 
+            role: "Builder/Outreach",
+            description: "I assist in building and outreach for the team.",
+            img: "img/darkikeyapic.jpg" 
+        },
+        { 
+            name: "Abhinav", 
+            role: "Builder",
+            description: "Focuses on chassis design and structural integrity.",
+            img: "img/chipapapi.jpg" 
+        },
+        { 
+            name: "Ujwel", 
+            role: "Lead Builder",
+            description: "I built most of the robot and i coordnate my buddies to help me out",
+            img: "img/ujwelbeta.jpg" 
+        },
+        { 
+            name: "Divit", 
+            role: "Driver and Outreach",
+            description: "I assist Sai in managing everything outreach and I am a driver for Team Citrix. I enjoy driving and I also sometimes help out with building of the robot.",
+            img: "img/divitthepivot.png" 
+        },
+        { 
+            name: "Pranav", 
+            role: "Programmer (TELEOP) and Human Player",
+            description: "Works on tele-op controls and input handling, also helps coordnate the enitre team and suggests ideas for Outreach, Programming, and Building.",
+            img: "img/jinu.jpg" 
+        },
+        { 
+            name: "Vishwajeet", 
+            role: "Designer",
+            description: "I designed the orginal robot in CAD and we built off of that CAD project.",
+            img: `img/vishywahsy.png` 
+        },
+        { 
+            name: "Ishan", 
+            role: "Programmer (AUTO)",
+            description: "I program the auto section of the match, which we designed to maximize point collection.",
+            img: "img/tallkindergartener.jpg" 
+        },
+        { 
+            name: "Kegan", 
+            role: "Builder & tester",
+            description: "Assists with assembly and field element construction. Also tests the robot with Laksh and Divit.",
+            img: "img/personwedonttrust.jpg" 
+        },
+        { 
+            name: "Dhruva", 
+            role: "Programmer (auto)",
+            description: "I handle the autonomous programming for our robot using Java with Ishan.",
+            img: "img/Dhruva_the_goat.jpg" 
+        },
+        { 
+            name: "Laksh", 
+            role: "Programmer (Teleop) and Driver",
+            description: "I am the main programmer for teleop mode, making the neccessary java code and this website.",
+            img: "img/someone.jpg" 
+        },
+        { 
+            name: "Smitha", 
+            role: "Coach",
+            description: "Guides the team through engineering and programming challenges, and also steers the team through tough times.",
+            img: "" 
+        }
+    ];
+    // --- End Team Data ---
 
-        function renderTeam() {
-            const grid = document.getElementById('team-grid');
+
+    function renderTeam() {
+        const grid = document.getElementById('team-grid');
+        
+        teamMembers.forEach(member => {
+            const card = document.createElement('div');
+            card.className = "reveal bg-citrix-light rounded-xl overflow-hidden border border-gray-700 card-hover transition-all duration-300 group";
             
-            teamMembers.forEach(member => {
-                const card = document.createElement('div');
-                // ADDED 'reveal' class here
-                card.className = "reveal bg-citrix-light rounded-xl overflow-hidden border border-gray-700 card-hover transition-all duration-300 group";
-                
-                // 2. UPDATED HTML TEMPLATE: Now uses member.role and member.description
-                card.innerHTML = `
-                    <div class="h-64 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition-colors z-10"></div>
-                        <img 
-                            src="${member.img}" 
-                            alt="${member.name}" 
-                            class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                            onerror="this.onerror=null; this.src='${fallbackImage}${member.name}';"
-                        >
+            card.innerHTML = `
+                <div class="h-64 overflow-hidden relative">
+                    <div class="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition-colors z-10"></div>
+                    <img 
+                        src="${member.img}" 
+                        alt="${member.name}" 
+                        width="256"      
+                        height="256"     
+                        loading="lazy"   
+                        class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        onerror="this.onerror=null; this.src='${fallbackImage}${member.name}';"
+                    >
+                </div>
+                <div class="p-6 relative">
+                    <div class="absolute -top-10 right-4 w-12 h-12 bg-citrix-accent rounded-full flex items-center justify-center text-citrix-dark shadow-lg">
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <div class="p-6 relative">
-                        <div class="absolute -top-10 right-4 w-12 h-12 bg-citrix-accent rounded-full flex items-center justify-center text-citrix-dark shadow-lg">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-1 group-hover:text-citrix-accent transition-colors">${member.name}</h3>
-                        
-                        <p class="text-citrix-accent text-sm font-semibold uppercase tracking-wider mb-3">
-                            ${member.role || 'Team Member'}
-                        </p>
-                        
-                        <p class="text-gray-400 text-sm leading-relaxed">
-                            ${member.description || 'Dedicated member of Team #31007.'}
-                        </p>
-                        
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
+                    <h3 class="text-xl font-bold mb-1 group-hover:text-citrix-accent transition-colors">${member.name}</h3>
+                    
+                    <p class="text-citrix-accent text-sm font-semibold uppercase tracking-wider mb-3">
+                        ${member.role || 'Team Member'}
+                    </p>
+                    
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        ${member.description || 'Dedicated member of Team #31007.'}
+                    </p>
+                    
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+    }
 
-        // Mobile Menu Toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+    // Mobile Menu Toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+
+    // Initialize Scroll Animation
+    function initScrollAnimations() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
         });
 
-        // Initialize Scroll Animation
-        function initScrollAnimations() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
-            });
-
-            document.querySelectorAll('.reveal').forEach((el) => {
-                observer.observe(el);
-            });
-        }
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            renderTeam();
-            initScrollAnimations();
+        document.querySelectorAll('.reveal').forEach((el) => {
+            observer.observe(el);
         });
-    </script>
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+        renderTeam();
+        initScrollAnimations();
+    });
+</script>
     
 </body>
 </html>
