@@ -18,12 +18,6 @@ The official, responsive static website for Robotics Team Citrix #31007. This si
 * **Font Awesome** (for icons)
 * **Google Fonts** (Inter for body, Orbitron for tech-themed headers)
 
-## 📋 File Structure
-
-The project is structured as a collection of static HTML pages:
-
-. ├── index.html # The main homepage. ├── robot.html # Detailed overview and specifications of the robot. ├── schedule.html # List of upcoming and past events/competitions. ├── sponsors.html # Page acknowledging and thanking team sponsors. ├── teamembers.html # Page listing team members, roles, and descriptions. └── img/ (implied) # Directory for team logos, robot images, and member photos.
-
 
 ## 💻 Getting Started
 
@@ -47,8 +41,8 @@ You need a modern web browser to view the site.
 
 The site uses a custom Tailwind CSS configuration defined within each HTML file. You can easily adjust the primary team colors:
 
-```html
-<script>
+```javascript
+
     tailwind.config = {
         theme: {
             extend: {
@@ -64,8 +58,5 @@ The site uses a custom Tailwind CSS configuration defined within each HTML file.
             }
         }
     }
-</script>
-Modify the hex codes under the citrix object to change the site's color scheme across all pages.
 
-📄 License
-© 2025 Team Citrix #31007. All rights reserved. (As per the project's footer.)
+Modify the hex codes under the citrix object to change the site's color scheme across all pages.
