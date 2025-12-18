@@ -6,6 +6,7 @@
     <title>Coming Soon | Team Citrix #31007</title>
         <link rel="icon" type="image/png" href="img/logo.png">
     <link rel="stylesheet" href="css/comingsoon.css">
+    <script src="js/comingsoon.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 </head>
@@ -54,20 +55,6 @@
     </footer>
 
     <!-- Scroll Animation -->
-    <script>
-        function initScrollAnimations() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, { threshold: 0.1 });
 
-            document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-        }
-
-        document.addEventListener('DOMContentLoaded', initScrollAnimations);
-    </script>
 </body>
 </html>

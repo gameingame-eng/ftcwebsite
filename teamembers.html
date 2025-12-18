@@ -48,7 +48,7 @@
             color: #f8fafc;
         }
         .tech-font {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Orbitron', sans-serif; /* the is the font used in the sponsors thing */
         }
         .card-hover {
             /* Optimized transition: specific properties only */
@@ -60,6 +60,7 @@
         }
         .text-gradient {
             background: linear-gradient(to right, #38bdf8, #818cf8);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -270,13 +271,15 @@
             name: "Divit", 
             role: "Driver and Outreach",
             description: "I assist Sai in managing everything outreach and I am a driver for Team Citrix. I enjoy driving and I also sometimes help out with building of the robot.",
-            img: "img/divitthepivot.png" 
+            img: "img/divitthepivot.avif",
+            alt: "img/divitthepivot.png" 
         },
         { 
             name: "Pranav", 
             role: "Programmer (TELEOP) and Human Player",
             description: "Works on tele-op controls and input handling, also helps coordnate the enitre team and suggests ideas for Outreach, Programming, and Building.",
-            img: "img/jinu.jpg" 
+            img: "img/gong_gong.avif",
+            alt: "img/jinu.jpg" 
         },
         { 
             name: "Vishwajeet", 
@@ -288,7 +291,8 @@
             name: "Ishan", 
             role: "Programmer (AUTO)",
             description: "I program the auto section of the match, which we designed to maximize point collection.",
-            img: "img/tallkindergartener.webp" 
+            img: "img/tallkindergartener.webp" ,
+            alt: "img/tallkindergartener.jpg"
         },
         { 
             name: "Kegan", 
@@ -300,19 +304,22 @@
             name: "Dhruva", 
             role: "Programmer (auto)",
             description: "I handle the autonomous programming for our robot using Java with Ishan.",
-            img: "img/Dhruva_the_goat.jpg" 
+            img: "img/Dhruva_the_goat.avif",
+            alt: "img/Dhruva_the_goat.jpg" 
         },
         { 
             name: "Laksh", 
-            role: "Programmer (Teleop) and Driver",
+            role: "Programmer (teleop) and Driver",
             description: "I am the main programmer for teleop mode, making the neccessary java code and this website.",
-            img: "img/someone.jpg" 
+            img: "img/someone.jpg",
+            alt: "" 
         },
         { 
             name: "Smitha", 
             role: "Coach",
             description: "Guides the team through engineering and programming challenges, and also steers the team through tough times.",
-            img: "" 
+            img: "", 
+            alt: ""
         }
     ];
 
@@ -329,16 +336,17 @@
             card.innerHTML = `
                 <div class="h-64 overflow-hidden relative">
                     <div class="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition-colors z-10"></div>
-                    <img 
-                        src="${member.img}" 
-                        alt="${member.name}" 
-                        width="256"      
-                        height="256"     
-                        loading="lazy"
-                        decoding="async" 
-                        class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                        onerror="this.onerror=null; this.src='${fallbackImage}${member.name}';"
-                    >
+                <img 
+                    src="${member.img}" 
+                    alt="${member.name}" 
+                    width="256"      
+                    height="256"     
+                    loading="lazy"
+                    decoding="async" 
+                    class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    onerror="if(this.src.endsWith('.avif') && '${member.alt}') { this.src='${member.alt}'; } else { this.onerror=null; this.src='${fallbackImage}${member.name}'; }"
+                >
+
                 </div>
                 <div class="p-6 relative">
                     <div class="absolute -top-10 right-4 w-12 h-12 bg-citrix-accent rounded-full flex items-center justify-center text-citrix-dark shadow-lg">
@@ -391,6 +399,9 @@
         initScrollAnimations();
     });
 </script>
-    
+ <!--
+ive done my job
+now leave me alone
+ -->   
 </body>
 </html>
