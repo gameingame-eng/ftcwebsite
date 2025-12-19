@@ -49,6 +49,19 @@
                 transform: translate(-50%, -50%);
                 mix-blend-mode: screen;
             }
+            .text-glow-blue {
+                transition: text-shadow 0.3s ease, color 0.3s ease;
+                cursor: pointer;
+            }
+
+            .text-glow-blue:hover {
+                color: #fff; /* Brightens text to white to make the blue pop */
+                /* Stacking shadows with increasing radii for an intense blue bloom */
+                text-shadow: 0 0 5px #00d4ff, 
+                             0 0 10px #00d4ff, 
+                             0 0 20px #00d4ff, 
+                             0 0 40px #0099ff;
+            }
         `;
         document.head.appendChild(style);
 
