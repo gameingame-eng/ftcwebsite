@@ -161,39 +161,38 @@
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 relative overflow-hidden bg-gradient-to-b from-citrix-light to-citrix-dark border-t border-gray-800">
-        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
-            <h2 class="reveal text-3xl font-bold mb-6 tech-font">Contact Us</h2>
-            <p class="reveal text-gray-300 mb-8 text-lg">
-                Interested in mentoring, sponsoring, or just want to say hi? We'd love to hear from you. If you message us, we will respond in about 2-5 days.
-            </p>
-            
-            <div class="reveal bg-citrix-dark/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 shadow-2xl">
-                <form 
-                    action="https://formspree.io/f/xzzngden" 
-                    method="POST" 
-                    class="space-y-4 text-left"
-                >
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Name</label>
-                            <input type="text" id="name" name="name" class="w-full bg-citrix-light border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:border-citrix-accent text-white" placeholder="Your Name" required>
-                        </div>
-                        <div>
-                            <label for="_replyto" class="block text-sm font-medium text-gray-400 mb-1">Email</label>
-                            <input type="email" id="_replyto" name="_replyto" class="w-full bg-citrix-light border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:border-citrix-accent text-white" placeholder="your@email.com" required>
-                        </div>
+    <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+        <h2 class="reveal text-3xl font-bold mb-6 tech-font">Contact Us</h2>
+        <p class="reveal text-gray-300 mb-8 text-lg">
+            Interested in mentoring, sponsoring, or just want to say hi? We'd love to hear from you. If you message us, we will respond in about 2-5 days.
+        </p>
+        
+        <div class="reveal bg-citrix-dark/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 shadow-2xl">
+            <!-- ADD an ID to the form and REMOVE action/method attributes -->
+            <form id="contactForm" class="space-y-4 text-left"> 
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-400 mb-1">Name</label>
+                        <input type="text" id="name" name="name" class="w-full bg-citrix-light border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:border-citrix-accent text-white" placeholder="Your Name" required>
                     </div>
                     <div>
-                        <label for="message" class="block text-sm font-medium text-gray-400 mb-1">Message</label>
-                        <textarea rows="4" id="message" name="message" class="w-full bg-citrix-light border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:border-citrix-accent text-white" placeholder="How can we help?" required></textarea>
+                        <label for="email" class="block text-sm font-medium text-gray-400 mb-1">Email</label>
+                        <!-- Change id from _replyto to email for clarity -->
+                        <input type="email" id="email" name="email" class="w-full bg-citrix-light border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:border-citrix-accent text-white" placeholder="your@email.com" required>
                     </div>
-                    
-                    <button type="submit" class="w-full bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-8 py-3 rounded-lg font-bold shadow-xl">
-                        Send Message
-                    </button>
-                </form>
-            </div>
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-400 mb-1">Message</label>
+                    <textarea rows="4" id="message" name="message" class="w-full bg-citrix-light border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:border-citrix-accent text-white" placeholder="How can we help?" required></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-8 py-3 rounded-lg font-bold shadow-xl">
+                    Send Message
+                </button>
+            </form>
         </div>
+    </div>
+</section>
     </section>
 
     <!-- Footer -->
@@ -259,6 +258,7 @@
             initScrollAnimations();
         });
     </script>
+    <script src="js/contact.js"></script>
     <style>
         /* theres no css here lol */
     </style>
