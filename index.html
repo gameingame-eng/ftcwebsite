@@ -124,22 +124,7 @@
                 </div>
                 
                 <!-- Desktop Menu (Home link highlighted) -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html" class="nav-link-glow px-3 py-2 rounded-md text-citrix-accent bg-citrix-light px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                        <a href="teamembers.html" class="nav-link-glow px-3 py-2 rounded-md hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Team Members</a>
-                        <a href="robot.html" class="nav-link-glow px-3 py-2 rounded-md hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Robot</a>
-                        <a href="sponsors.html" class="nav-link-glow px-3 py-2 rounded-md hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Sponsors</a>
-                        <a href="schedule.html" class="nav-link-glow px-3 py-2 rounded-md hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Schedule</a>
-                        <a href="sponsors.html#contact" class="nav-link-glow px-3 py-2 rounded-md bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-4 py-2 rounded-full text-sm font-bold">Contact Us</a>
-                        <div class="relative group">
-                            <button class="nav-link-glow px-3 py-2 rounded-md hover:text-citrix-accent transition-colors text-sm font-medium flex items-center">More <i class="fas fa-chevron-right ml-1 transition-transform group-hover:rotate-90"></i></button>
-                            <div class="absolute left-0 mt-2 w-48 bg-citrix-light rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                                <a href="aboutftc.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-citrix-accent hover:bg-citrix-dark">About FTC</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="hidden md:block desktop-menu-placeholder"></div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
@@ -151,17 +136,7 @@
         </div>
 
         <!-- Mobile Menu Panel (Home link highlighted) -->
-        <div id="mobile-menu" class="md:hidden hidden bg-citrix-light border-b border-gray-700 absolute w-full">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        <a href="index.html" class="text-citrix-accent bg-citrix-light px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                        <a href="teamembers.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Team Members</a>
-                        <a href="robot.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Robot</a>
-                        <a href="sponsors.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Sponsors</a>
-                        <a href="schedule.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">Schedule</a>
-                        <a href="sponsors.html#contact" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-colors px-4 py-2 rounded-full text-sm font-bold">Contact Us</a>
-                        <a href="aboutftc.html" class="hover:text-citrix-accent transition-colors px-3 py-2 rounded-md text-sm font-medium">About FTC</a>
-            </div>
-        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-citrix-light border-b border-gray-700 absolute w-full mobile-menu-placeholder"></div>
     </nav>
 
     <!-- Hero Section -->
@@ -394,6 +369,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 </script>
     <script src="js/glow.js" defer></script>
+    <script src="js/header.js" defer></script>
 </body>
 
 </html>

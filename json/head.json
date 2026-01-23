@@ -1,0 +1,52 @@
+{
+  "navItems": [
+    {
+      "label": "Home",
+      "href": "index.html",
+      "id": "home"
+    },
+    {
+      "label": "Team Members",
+      "href": "teamembers.html",
+      "id": "team-members"
+    },
+    {
+      "label": "Robot",
+      "href": "robot.html",
+      "id": "robot"
+    },
+    {
+      "label": "Outreach",
+      "id": "outreach",
+      "type": "dropdown",
+      "children": [
+        {
+          "label": "Sponsors",
+          "href": "sponsors.html",
+          "id": "sponsors"
+        }
+      ]
+    },
+    {
+      "label": "FTC",
+      "id": "ftc",
+      "type": "dropdown",
+      "children": [
+        {
+          "label": "Schedule",
+          "href": "schedule.html",
+          "id": "schedule"
+        },
+        {
+          "label": "About FTC",
+          "href": "aboutftc.html",
+          "id": "about-ftc"
+        }
+      ]
+    }
+  ],
+  "ctaButton": {
+    "label": "Contact Us",
+    "href": "sponsors.html#contact"
+  }
+}
