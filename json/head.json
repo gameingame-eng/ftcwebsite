@@ -24,6 +24,11 @@
           "label": "Sponsors",
           "href": "sponsors.html",
           "id": "sponsors"
+        },
+        {
+            "label": "More coming Soon!",
+            "href": "comingsoon.html",
+            "id": "coming-soon"
         }
       ]
     },
