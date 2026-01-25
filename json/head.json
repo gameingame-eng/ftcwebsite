@@ -2,12 +2,12 @@
   "navItems": [
     {
       "label": "Home",
-      "href": "index.html",
+      "href": "../index.html",
       "id": "home"
     },
     {
       "label": "Team Members",
-      "href": "teamembers.html",
+      "href": "../teamembers.html",
       "id": "team-members"
     },
     {
@@ -17,13 +17,13 @@
       "children": [
         {
           "label": "Sponsors",
-          "href": "outreach/sponsors.html",
+          "href": "../outreach/sponsors.html",
           "id": "sponsors"
         },
         {
-            "label": "More coming Soon!",
-            "href": "comingsoon.html",
-            "id": "coming-soon"
+            "label": "YouTube",
+            "href": "../outreach/yt.html",
+            "id": "yt"
         }
       ]
     },
@@ -34,17 +34,17 @@
       "children": [
         {
           "label": "Schedule",
-          "href": "schedule.html",
+          "href": "../schedule.html",
           "id": "schedule"
         },
         {
           "label": "About FTC",
-          "href": "aboutftc.html",
+          "href": "../aboutftc.html",
           "id": "about-ftc"
         },
         {
           "label": "Robot",
-          "href": "robot.html",
+          "href": "../robot.html",
           "id": "robot"
         }
       ]

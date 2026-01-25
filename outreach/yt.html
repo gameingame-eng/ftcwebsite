@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Citrix #31007 | YouTube</title>
+    <script src="js/glow.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/sponsors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        citrix: {
+                            dark: '#0f172a',
+                            light: '#1e293b',
+                            accent: '#38bdf8', // Light blue/cyan
+                            hover: '#0ea5e9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'] // Tech-looking font for headers
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-citrix-dark text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-citrix-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/20">
+                        <img src="../img/logo.png" alt="C">
+                    </div>
+                    <span class="tech-font text-xl md:text-2xl font-bold tracking-wider">TEAM CITRIX <span class="text-citrix-accent">#31007</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block desktop-menu-placeholder"></div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden hidden bg-citrix-light border-b border-gray-700 absolute w-full mobile-menu-placeholder"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
+        <!-- Background decorative blobs -->
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full z-0 pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div class="absolute top-20 right-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+            <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-red-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="reveal inline-block py-1 px-3 rounded-full bg-red-900/30 border border-red-500/30 text-red-400 text-sm font-semibold mb-6">TEAM CITRIX ON YOUTUBE</span>
+            <h1 class="reveal text-5xl md:text-7xl font-black tech-font mb-6 tracking-tight">
+                SUBSCRIBE & <br><span class="text-gradient">WATCH</span>
+            </h1>
+            <p class="reveal mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+                Follow our robotics journey, competition highlights, and behind-the-scenes content from Team Citrix #31007.
+            </p>
+            <div class="reveal flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://www.youtube.com/@TeamCitrix" target="_blank" class="bg-red-600 text-white hover:bg-red-700 transition-all px-8 py-3 rounded-lg font-bold text-lg shadow-lg shadow-red-500/25 flex items-center justify-center gap-2">
+                    <i class="fab fa-youtube"></i> Subscribe
+                </a>
+                <a href="#videos" class="border border-gray-600 hover:border-gray-400 hover:bg-white/5 transition-all px-8 py-3 rounded-lg font-bold text-lg flex items-center justify-center gap-2">
+                    Recent Videos <i class="fas fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Channel Stats Section -->
+    <section class="py-20 bg-citrix-dark border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="reveal text-3xl md:text-4xl font-bold tech-font mb-4">Channel Stats</h2>
+            <p class="reveal text-gray-400 mb-12 max-w-2xl mx-auto">
+                Thank you for supporting Team Citrix on YouTube!
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Subscribers -->
+                <div class="reveal bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-colors border border-gray-700 shadow-lg">
+                    <div class="text-5xl font-black text-red-500 mb-2" id="subscribers">12.5K</div>
+                    <p class="text-gray-400 text-lg">Subscribers</p>
+                </div>
+
+                <!-- Views -->
+                <div class="reveal bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-colors border border-gray-700 shadow-lg">
+                    <div class="text-5xl font-black text-citrix-accent mb-2" id="views">450K</div>
+                    <p class="text-gray-400 text-lg">Total Views</p>
+                </div>
+
+                <!-- Videos -->
+                <div class="reveal bg-white/5 p-8 rounded-xl hover:bg-white/10 transition-colors border border-gray-700 shadow-lg">
+                    <div class="text-5xl font-black text-cyan-400 mb-2" id="videoCount">87</div>
+                    <p class="text-gray-400 text-lg">Videos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center reveal">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
+                         <div class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-xs font-bold"><img src="../img/logo.png" alt="C"></div>
+                         <span class="tech-font text-xl font-bold">TEAM CITRIX #31007</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Inspiring the next generation of engineers through FIRST Tech Challenge.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.youtube.com/@TeamCitrix" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors text-2xl">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://ftc-events.firstinspires.org/2025/team/31007" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                        <i class="fa-duotone fa-solid fa-robot"></i>
+                    </a>
+                    <a href="https://www.instagram.com/teamcitrix31007" target="_blank" class="text-gray-400 hover:text-pink-500 transition-colors text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                  <a href="mailto:teamcitrix31007@gmail.com" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors text-2xl">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // Load YouTube stats from JSON
+        async function loadYouTubeData() {
+            try {
+                const response = await fetch('../json/yt.json');
+                const data = await response.json();
+
+                // Update stats
+                document.getElementById('subscribers').textContent = data.stats.subscribers;
+                document.getElementById('views').textContent = data.stats.views;
+                document.getElementById('videoCount').textContent = data.stats.videos;
+            } catch (error) {
+                console.error('Error loading YouTube stats:', error);
+            }
+        }
+
+        // Load videos from video.json
+        async function loadVideos() {
+            try {
+                const response = await fetch('json/video.json');
+                const video = await response.json();
+
+                // Update video title and description
+                document.getElementById('video-title').textContent = video.title;
+                document.getElementById('video-description').textContent = video.description;
+
+                // Load video embed
+                const videosGrid = document.getElementById('videos-grid');
+                videosGrid.innerHTML = `
+                    <div class="reveal bg-white/5 rounded-xl overflow-hidden border border-gray-700 shadow-lg">
+                        <div class="aspect-video bg-black">
+                            <iframe 
+                                width="100%" 
+                                height="100%" 
+                                src="${video.embedUrl}" 
+                                title="Team Citrix Video"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                `;
+            } catch (error) {
+                console.error('Error loading videos:', error);
+            }
+        }
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Initialize Scroll Animation
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadYouTubeData();
+            loadVideos();
+            initScrollAnimations();
+        });
+    </script>
+    <script src="js/glow.js" defer></script>
+    <script src="js/header.js" defer></script>
+</body>
+</html>

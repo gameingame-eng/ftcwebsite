@@ -21,9 +21,9 @@
           "id": "sponsors"
         },
         {
-            "label": "More coming Soon!",
-            "href": "../comingsoon.html",
-            "id": "coming-soon"
+            "label": "YouTube",
+            "href": "../outreach/yt.html",
+            "id": "yt"
         }
       ]
     },
