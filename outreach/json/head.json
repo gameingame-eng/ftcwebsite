@@ -24,6 +24,11 @@
             "label": "YouTube",
             "href": "../outreach/yt.html",
             "id": "yt"
+        },
+        {
+          "label": "About Outreach",
+          "href": "../outreach/aboutoutreach.html",
+          "id": "about-outreach"
         }
       ]
     },

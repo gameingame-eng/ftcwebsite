@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/header.js"></script>
+    <script src="js/glow.js"></script>
+    <title>About Outreach Team | Team Citrix #31007</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        citrix: {
+                            dark: '#0f172a',
+                            light: '#1e293b',
+                            accent: '#38bdf8', // Light blue/cyan
+                            hover: '#0ea5e9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'] // Tech-looking font for headers
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/aboutoutreach.css">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <script src="reveal.js"></script> <!-- saivarshan. edit htis to your liking, tell me if you need help. to acess this page, go to http://127.0.0.1:5500/outreach/aboutoutreach.html-->
+</head>
+<body class="bg-citrix-dark text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-citrix-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/20">
+                        <img src="../img/logo.png" alt="Team Citrix logo">
+                    </div>
+                    <span class="tech-font text-xl md:text-2xl font-bold tracking-wider text-glow-blue">TEAM CITRIX<span class="text-citrix-accent"> #31007</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block desktop-menu-placeholder"></div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden hidden bg-citrix-light border-b border-gray-700 absolute w-full mobile-menu-placeholder"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background decorative blobs -->
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full z-0 pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div class="absolute top-20 right-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+            <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="reveal inline-block py-1 px-3 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6">OUTREACH TEAM</span>
+            <h1 class="reveal text-5xl md:text-7xl font-black tech-font mb-6 tracking-tight">
+                OUTREACH <br><span class="text-gradient">TEAM</span>
+            </h1>
+            <p class="reveal mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+                Building partnerships and securing support for Team Citrix's mission to advance robotics
+            </p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-citrix-dark border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="reveal text-3xl md:text-4xl font-bold tech-font mb-4 section-header text-center">About Our Team</h2>
+            
+            <div class="reveal grid md:grid-cols-2 gap-12 items-center mt-12">
+                <div class="space-y-6">
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        The Outreach Team is responsible for building relationships with local businesses, organizations, and sponsors who share our passion for STEM education and innovation.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        We work tirelessly to secure the resources, funding, and partnerships that make Team Citrix's ambitious goals possible. From corporate sponsorships to community engagement, we are the bridge between our team and the greater community.
+                    </p>
+                    <div class="pt-6">
+                        <h3 class="text-xl font-bold text-citrix-accent mb-4 tech-font">Key Focus Areas</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-handshake text-citrix-accent mt-1"></i>
+                                <span><strong>Sponsors:</strong> Building partnerships with buisnesses.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-bullhorn text-citrix-accent mt-1"></i>
+                                <span><strong>Community Outreach:</strong> Promoting robotics around our community</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-dollar-sign text-citrix-accent mt-1"></i>
+                                <span><strong>Fundraising:</strong> Organizing events and campaigns to secure funding</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-network-wired text-citrix-accent mt-1"></i>
+                                <span><strong>Networking:</strong> Connecting with mentors, and donors.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="reveal bg-gradient-to-br from-blue-600/20 to-cyan-600/20 p-6 rounded-xl border border-blue-500/30">
+                        <div class="text-3xl font-bold text-citrix-accent mb-2">3</div>
+                        <p class="text-gray-300">Active Sponsors</p>
+                    </div>
+                    <div class="reveal bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-6 rounded-xl border border-purple-500/30">
+                        <div class="text-3xl font-bold text-citrix-accent mb-2">∞</div>
+                        <p class="text-gray-300">Work Put In</p>
+                    </div>
+                    <div class="reveal bg-gradient-to-br from-cyan-600/20 to-blue-600/20 p-6 rounded-xl border border-cyan-500/30">
+                        <div class="text-3xl font-bold text-citrix-accent mb-2">1</div>
+                        <p class="text-gray-300">Community Events</p>
+                    </div>
+                    <div class="reveal bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-6 rounded-xl border border-blue-500/30">
+                        <div class="text-2xl font-bold text-citrix-accent mb-2">more than we need</div>
+                        <p class="text-gray-300">Impact</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Tiers Section -->
+    <section id="tiers" class="py-20 bg-citrix-light border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="reveal text-3xl md:text-4xl font-bold tech-font mb-4 section-header">Partnership Opportunities</h2>
+            <p class="reveal text-gray-400 mb-12 max-w-2xl mx-auto">
+                We offer multiple sponsorship tiers to meet the needs and budgets of potential partners. To learn more, please <a href="../sponsors.html#contact" class="text-citrix-accent underline font-semibold">contact us</a>.
+            </p>
+    </section>
+
+    <!-- Team Members Section -->
+    <section id="members" class="py-20 bg-citrix-dark border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="reveal text-3xl md:text-4xl font-bold tech-font mb-4 section-header text-center">Meet the Team</h2>
+            <p class="reveal text-gray-400 mb-12 max-w-2xl mx-auto text-center">
+                Our outreach team works together to build meaningful partnerships and advance STEM education.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Team Member Card Template -->
+                <div class="reveal bg-citrix-light/50 rounded-xl p-6 border border-gray-700 hover:border-citrix-accent transition-colors hover:bg-citrix-light/70">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full mx-auto mb-4"></div>
+                    <h3 class="text-xl font-bold text-center mb-2">Saivarshan Prabhakaran</h3>
+                    <p class="text-citrix-accent text-center text-sm font-semibold mb-4">Outreach Lead</p>
+                    <p class="text-gray-400 text-center text-sm">I worked with managing the youtube channel, sharing information about our team and also with designing this website.</p>
+                </div>
+
+                <div class="reveal bg-citrix-light/50 rounded-xl p-6 border border-gray-700 hover:border-citrix-accent transition-colors hover:bg-citrix-light/70">
+                    <img src="img/diviting mohaning.png" alt="divit" class="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-400 rounded-full mx-auto mb-4"></img>
+                    <h3 class="text-xl font-bold text-center mb-2">Divit Mohan</h3>
+                    <p class="text-citrix-accent text-center text-sm font-semibold mb-4">People Manager</p>
+                    <p class="text-gray-400 text-center text-sm">I manage the people interested in our program and I keep track of how many people are interested in us.</p>
+                </div>                
+                <div class="reveal bg-citrix-light/50 rounded-xl p-6 border border-gray-700 hover:border-citrix-accent transition-colors hover:bg-citrix-light/70">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-blue-400 rounded-full mx-auto mb-4"></div>
+                    <h3 class="text-xl font-bold text-center mb-2">Dhruva Mamillipalli</h3>
+                    <p class="text-citrix-accent text-center text-sm font-semibold mb-4">Sponsor Relations</p>
+                    <p class="text-gray-400 text-center text-sm">Brief description of team member's role and contributions to community engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-citrix-light border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="reveal text-3xl md:text-4xl font-bold tech-font mb-6">Become a Partner</h2>
+            <p class="reveal text-gray-300 mb-8 text-lg max-w-2xl mx-auto">
+                Ready to support Team Citrix and make an impact in STEM education? Let's build something amazing together!
+            </p>
+            <div class="reveal flex flex-col sm:flex-row justify-center gap-4">
+                <a href="../outreach/sponsors.html" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-all px-8 py-3 rounded-lg font-bold text-lg shadow-lg shadow-blue-500/25">
+                    View Sponsors
+                </a>
+                <a href="../sponsors.html#contact" class="border border-gray-600 hover:border-gray-400 hover:bg-white/5 transition-all px-8 py-3 rounded-lg font-bold text-lg">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-citrix-dark border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    <p>&copy; 2025 Team Citrix #31007. All rights reserved.</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://www.youtube.com/@TeamCitrix" target="_blank" class="text-gray-400 hover:text-citrix-accent transition-colors">
+                        <i class="fab fa-youtube text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/gameingame-eng/Citrix" target="_blank" class="text-gray-400 hover:text-citrix-accent transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Reveal Animation Script -->
+    <script src="js/glow.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/reveal.js"></script>
+</body>
+</html>
