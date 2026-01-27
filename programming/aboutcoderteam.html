@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/header.js"></script>
+    <script src="js/glow.js"></script>
+    <title>About Coder Team | Team Citrix #31007</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        citrix: {
+                            dark: '#0f172a',
+                            light: '#1e293b',
+                            accent: '#38bdf8', // Light blue/cyan
+                            hover: '#0ea5e9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'] // Tech-looking font for headers
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/aboutcoderteam.css">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+</head>
+<body class="bg-citrix-dark text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-citrix-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/20">
+                        <img src="../img/logo.png" alt="Team Citrix logo">
+                    </div>
+                    <span class="tech-font text-xl md:text-2xl font-bold tracking-wider text-glow-blue">TEAM CITRIX<span class="text-citrix-accent"> #31007</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block desktop-menu-placeholder"></div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden hidden bg-citrix-light border-b border-gray-700 absolute w-full mobile-menu-placeholder"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background decorative blobs -->
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full z-0 pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div class="absolute top-20 right-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+            <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="reveal inline-block py-1 px-3 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6">PROGRAMMING TEAM</span>
+            <h1 class="reveal text-5xl md:text-7xl font-black tech-font mb-6 tracking-tight">
+                CODER <br><span class="text-gradient">TEAM</span>
+            </h1>
+            <p class="reveal mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+                Discover the talented programmers behind Team Citrix who drive innovation and excellence in FIRST Tech Challenge.
+            </p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-citrix-dark border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="reveal text-3xl md:text-4xl font-bold tech-font mb-4 section-header text-center">About Our Team</h2>
+            
+            <div class="reveal grid md:grid-cols-2 gap-12 items-center mt-12">
+                <div class="space-y-6">
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        We are the coding team of Team Citrix #31007, and we work hard to develop our robot's brain so it can be competition ready.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Our programmers work with 
+                    </p>
+                    <div class="pt-6">
+                        <h3 class="text-xl font-bold text-citrix-accent mb-4 tech-font">Key Focus Areas</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-code text-citrix-accent mt-1"></i>
+                                <span><strong>Robot Control:</strong> Autonomous and teleop code for smooth robot operation</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-camera text-citrix-accent mt-1"></i>
+                                <span><strong>Accuracy:</strong> Achieved using PedroPathing and Drive Motor Encoders</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-cog text-citrix-accent mt-1"></i>
+                                <span><strong>Motion Planning:</strong> Efficient path optimization and movement control</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-project-diagram text-citrix-accent mt-1"></i>
+                                <span><strong>System Architecture:</strong> Robust and scalable software design</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="reveal bg-gradient-to-br from-blue-600/20 to-cyan-600/20 p-6 rounded-xl border border-blue-500/30">
+                        <div class="text-3xl font-bold text-citrix-accent mb-2">300+</div>
+                        <p class="text-gray-300">Lines of Code</p>
+                    </div>
+                    <div class="reveal bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-6 rounded-xl border border-purple-500/30">
+                        <div class="text-3xl font-bold text-citrix-accent mb-2">95%</div>
+                        <p class="text-gray-300">Success Rate</p>
+                    </div>
+                    <div class="reveal bg-gradient-to-br from-cyan-600/20 to-blue-600/20 p-6 rounded-xl border border-cyan-500/30">
+                        <div class="text-2xl font-bold text-citrix-accent mb-2">Almost every day</div>
+                        <p class="text-gray-300">Development</p>
+                    </div>
+                    <div class="reveal bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-6 rounded-xl border border-blue-500/30">
+                        <div class="text-3xl font-bold text-citrix-accent mb-2">∞</div>
+                        <p class="text-gray-300">Innovation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="tech" class="py-20 bg-citrix-light border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="reveal text-3xl md:text-4xl font-bold tech-font mb-4 section-header">Technologies We Use</h2>
+            <p class="reveal text-gray-400 mb-12 max-w-2xl mx-auto">
+                We leverage industry-standard tools and frameworks to build robust, efficient robotics software.
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="reveal bg-citrix-dark/50 p-6 rounded-xl border border-gray-700 hover:border-citrix-accent transition-colors hover:bg-citrix-dark/70">
+                    <i class="fab fa-java text-4xl text-orange-500 mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Java</h3>
+                    <p class="text-gray-400 text-sm">Primary FTC programming language</p>
+                </div>
+                
+                <div class="reveal bg-citrix-dark/50 p-6 rounded-xl border border-gray-700 hover:border-citrix-accent transition-colors hover:bg-citrix-dark/70">
+                    <img src="img/image.png" alt="PedroPathing" class="h-16 w-16 mb-4 mx-auto">
+                    <h3 class="font-bold text-lg mb-2">Pedro Pathing</h3>
+                    <p class="text-gray-400 text-sm">Powerful Java Library</p>
+                </div>
+                
+                <div class="reveal bg-citrix-dark/50 p-6 rounded-xl border border-gray-700 hover:border-citrix-accent transition-colors hover:bg-citrix-dark/70">
+                    <i class="fas fa-cube text-4xl text-purple-400 mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">FTC SDK</h3>
+                    <p class="text-gray-400 text-sm">Official robotics framework</p>
+                </div>
+                
+                <div class="reveal bg-citrix-dark/50 p-6 rounded-xl border border-gray-700 hover:border-citrix-accent transition-colors hover:bg-citrix-dark/70">
+                    <i class="fa-brands fa-github text-4xl text-red-500 mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Git</h3>
+                    <p class="text-gray-400 text-sm">Version control & collaboration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Members Section -->
+    <section id="members" class="py-20 bg-citrix-dark border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="reveal text-3xl md:text-4xl font-bold tech-font mb-4 section-header text-center">Meet the Team</h2>
+            <p class="reveal text-gray-400 mb-12 max-w-2xl mx-auto text-center">
+                Our dedicated programmers work together to solve complex problems and deliver exceptional results.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Team Member Card Template -->
+                <div class="reveal bg-citrix-light/50 rounded-xl p-6 border border-gray-700 hover:border-citrix-accent transition-colors hover:bg-citrix-light/70">
+                    <img src="img/lakshya.png" alt="Lakshya Dusanapudi" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-center mb-2">Lakshya Dusanapudi</h3>
+                    <p class="text-citrix-accent text-center text-sm font-semibold mb-4">Coder / Teleop</p>
+                    <p class="text-gray-400 text-center text-sm">Hi! My name is Lakshya Dusanapudi, and I am a teleop programmer on Team Citrix. I code most of the Tele-op program for our robot, and assist Pranav in creating the Autonomous program.</p>
+                </div>
+
+                <div class="reveal bg-citrix-light/50 rounded-xl p-6 border border-gray-700 hover:border-citrix-accent transition-colors hover:bg-citrix-light/70">
+                    <img src="img/pranav.png" alt="Pranav Somayajula" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-center mb-2">Pranav Somayajula</h3>
+                    <p class="text-citrix-accent text-center text-sm font-semibold mb-4">Coder / Autonomous</p>
+                    <p class="text-gray-400 text-center text-sm">Hi! My name is Pranav Somayajula, and I am an autonomous programmer on Team Citrix. I code most of the Autonomous program for our robot, and assist Lakshya in creating the Tele-op program.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-citrix-dark border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    <p>&copy; 2025 Team Citrix #31007. All rights reserved.</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://www.youtube.com/@TeamCitrix" target="_blank" class="text-gray-400 hover:text-citrix-accent transition-colors">
+                        <i class="fab fa-youtube text-2xl"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-citrix-accent transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Reveal Animation Script -->
+    <script src="js/glow.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/reveal.js"></script>
+</body>
+</html>

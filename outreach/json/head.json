@@ -28,6 +28,24 @@
       ]
     },
     {
+      "label": "Programming",
+      "id": "programming",
+      "type": "dropdown",
+      "children": [
+        {
+          "label": "About Coder Team",
+          "href": "../programming/aboutcoderteam.html",
+          "id": "about-coder-team"
+        },
+        {
+          "label": "More soon!",
+          "href": "../comingsoon.html",
+          "id": "code-examples"
+        }
+      ]
+
+    },
+    {
       "label": "FTC",
       "id": "ftc",
       "type": "dropdown",
