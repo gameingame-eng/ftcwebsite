@@ -41,6 +41,11 @@
           "label": "About Coder Team",
           "href": "../programming/aboutcoderteam.html",
           "id": "about-coder-team"
+        },
+        {
+          "label": "More soon!",
+          "href": "../comingsoon.html",
+          "id": "code-examples"
         }
       ]
 
@@ -76,11 +81,6 @@
           "label": "Coming Soon!",
           "href": "../comingsoon.html",
           "id": "about-build-team"
-        },
-        {
-          "label": "More soon!",
-          "href": "../comingsoon.html",
-          "id": "build-examples"
         }
       ]
     }
