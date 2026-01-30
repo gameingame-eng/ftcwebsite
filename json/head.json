@@ -6,7 +6,7 @@
       "id": "home"
     },
     {
-      "label": "Team Members",
+      "label": "Roster",
       "href": "../teamembers.html",
       "id": "team-members"
     },
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "label": "Coding",
+      "label": "Programming",
       "id": "programming",
       "type": "dropdown",
       "children": [
