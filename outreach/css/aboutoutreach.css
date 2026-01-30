@@ -82,8 +82,3 @@ body {
 .animation-delay-4000 {
     animation-delay: 4s;
 }
-
-/* Glow text effect */
-.text-glow-blue {
-    text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
-}
