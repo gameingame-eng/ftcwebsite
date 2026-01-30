@@ -41,11 +41,6 @@
           "label": "About Coder Team",
           "href": "../programming/aboutcoderteam.html",
           "id": "about-coder-team"
-        },
-        {
-          "label": "More soon!",
-          "href": "../comingsoon.html",
-          "id": "code-examples"
         }
       ]
     },
