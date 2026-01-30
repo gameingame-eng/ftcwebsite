@@ -17,6 +17,7 @@ def update_head_json():
     dest_files = [
         root_dir / "programming" / "json" / "head.json",
         root_dir / "outreach" / "json" / "head.json"
+        root_dir / "buildteam" / "json" / "head.json"
     ]
     
     # Check if source file exists
