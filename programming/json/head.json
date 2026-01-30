@@ -70,6 +70,23 @@
           "id": "robot"
         }
       ]
+    },
+    {
+      "label": "Build",
+      "type": "dropdown",
+      "id": "build-team",
+      "children": [
+        {
+          "label": "Coming Soon!",
+          "href": "../comingsoon.html",
+          "id": "about-build-team"
+        },
+        {
+          "label": "More soon!",
+          "href": "../comingsoon.html",
+          "id": "build-examples"
+        }
+      ]
     }
   ],
   "ctaButton": {
