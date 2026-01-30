@@ -1,4 +1,3 @@
-
 {
   "navItems": [
     {
@@ -22,9 +21,9 @@
           "id": "sponsors"
         },
         {
-            "label": "YouTube",
-            "href": "../outreach/yt.html",
-            "id": "yt"
+          "label": "YouTube",
+          "href": "../outreach/yt.html",
+          "id": "yt"
         },
         {
           "label": "About Outreach",
@@ -49,7 +48,6 @@
           "id": "code-examples"
         }
       ]
-
     },
     {
       "label": "FTC",
