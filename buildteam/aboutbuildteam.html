@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/header.js"></script>
+    <script src="js/glow.js"></script>
+    <title>Build & Engineering | Team Citrix #31007</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        citrix: {
+                            dark: '#0f172a',
+                            light: '#1e293b',
+                            accent: '#38bdf8',
+                            hover: '#0ea5e9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/glow.css">
+    <link rel="stylesheet" href="css/aboutoutreach.css">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <script src="reveal.js"></script>
+</head>
+<body class="bg-citrix-dark text-white overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-citrix-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center">
+                        <img src="../img/logo.png" alt="Team Citrix logo">
+                    </div>
+                    <span class="tech-font text-xl md:text-2xl font-bold tracking-wider text-glow-blue">TEAM CITRIX<span class="text-citrix-accent"> #31007</span></span>
+                </div>
+                <div class="hidden md:block desktop-menu-placeholder"></div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-left">
+                    <span class="reveal inline-block py-1 px-3 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6 uppercase tracking-widest">Engineering Division</span>
+                    <h1 class="reveal text-5xl md:text-7xl font-black tech-font mb-6 leading-tight">
+                        THE <span class="text-gradient">BUILD</span><br>PROCESS
+                    </h1>
+                    <p class="reveal text-xl text-gray-400 mb-8 max-w-lg">
+                        From CAD blueprints to competitive hardware. We design, prototype, and manufacture the mechanical heart of Team Citrix.
+                    </p>
+                </div>
+                <div class="reveal relative">
+                    <div class="absolute inset-0 bg-citrix-accent/20 blur-3xl rounded-full animate-pulse"></div>
+                    <div class="relative bg-citrix-light border border-gray-700 rounded-2xl p-4 shadow-2xl overflow-hidden">
+                        <div class="aspect-video bg-gray-900 rounded-lg flex items-center justify-center">
+                             <i class="fas fa-microchip text-6xl text-citrix-accent/20"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="workflow" class="py-24 bg-citrix-light/30 border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="reveal text-center tech-font text-3xl md:text-4xl mb-16">Engineering <span class="text-citrix-accent">Workflow</span></h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="reveal group p-8 rounded-2xl bg-citrix-dark border border-gray-700 hover:border-citrix-accent transition-all duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-citrix-accent mb-6 text-2xl group-hover:scale-110 transition-transform">
+                        <img src="img/blender.png"></img>
+                    </div>
+                    <h3 class="tech-font text-xl mb-4">Design & CAD</h3>
+                    <p class="text-gray-400 leading-relaxed">Detailed 3D modeling using Blender to assist in improving our bot.</p>
+                </div>
+
+                <div class="reveal group p-8 rounded-2xl bg-citrix-dark border border-gray-700 hover:border-citrix-accent transition-all duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-citrix-accent mb-6 text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="tech-font text-xl mb-4">Prototyping</h3>
+                    <p class="text-gray-400 leading-relaxed">Using 3D modeling and build iterations to determine the best fit got Tiggerbobot</p>
+                </div>
+
+                <div class="reveal group p-8 rounded-2xl bg-citrix-dark border border-gray-700 hover:border-citrix-accent transition-all duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-citrix-accent mb-6 text-2xl group-hover:scale-110 transition-transform">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="tech-font text-xl mb-4">Assembly</h3>
+                    <p class="text-gray-400 leading-relaxed">Precision integration of drivetrain, electronics, and custom-machined components into a tournament-ready chassis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-citrix-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal space-y-6">
+                    <h2 class="tech-font text-3xl">Technical <span class="text-citrix-accent">Specifications</span></h2>
+                    <p class="text-gray-400">Our build philosophy centers on modularity and reliability. Every component is designed to be easily serviced during competition pit-stops.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Drive Train</span>
+                            <span class="tech-font text-citrix-accent">Mecanum / 4-Motor</span>
+                        </div>
+                        <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                            <span class="text-gray-300">Custom Parts</span>
+                            <span class="tech-font text-citrix-accent">3D Printed or bought from GoBilda</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="reveal bg-gradient-to-br from-blue-600/20 to-cyan-600/20 p-8 rounded-xl border border-blue-500/30 text-center">
+                        <div class="text-3xl font-bold text-citrix-accent mb-2">6</div>
+                        <p class="text-xs uppercase tracking-widest text-gray-400">Total Gears</p>
+                    </div>
+                    <div class="reveal bg-gradient-to-br from-blue-600/20 to-cyan-600/20 p-8 rounded-xl border border-blue-500/30 text-center">
+                        <div class="text-3xl font-bold text-citrix-accent mb-2">2</div>
+                        <p class="text-xs uppercase tracking-widest text-gray-400">Total Servos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="members" class="py-24 bg-citrix-light/20 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="reveal text-center tech-font text-3xl md:text-4xl mb-16">The Builders</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-6">
+            
+            <div class="reveal group relative bg-citrix-dark rounded-2xl overflow-hidden border border-gray-800 hover:border-citrix-accent transition-all">
+                <div class="aspect-square bg-gray-800 overflow-hidden">
+                    <img src="img/Ujwel.jpg" alt="Build Lead" class="w-full h-full object-cover transition-all duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="tech-font font-bold">Ujwel Potluri</h3>
+                    <p class="text-citrix-accent text-sm">Build Lead</p>
+                </div>
+            </div>
+
+            <div class="reveal group relative bg-citrix-dark rounded-2xl overflow-hidden border border-gray-800 hover:border-citrix-accent transition-all">
+                <div class="aspect-square bg-gray-800 overflow-hidden">
+                    <img src="img/Vishwajeet.jpg" alt="3D Modeling Lead" class="w-full h-full object-cover transition-all duration-500">
+                </div>
+                <div class="p-6">
+                    <h3 class="tech-font font-bold">Vishwajeet Patil</h3>
+                    <p class="text-citrix-accent text-sm">3D Modeling Lead</p>
+                </div>
+            </div>
+
+        </div> 
+    </div>
+</section>
+
+    <section class="py-20 bg-citrix-dark border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="reveal text-3xl tech-font mb-6">See the Machine in Action</h2>
+            <p class="reveal text-gray-400 mb-8">Follow our build logs on YouTube to see how we progress from parts to a fully functional robot.</p>
+            <a href="https://www.youtube.com/@TeamCitrix" target="_blank" class="inline-flex items-center gap-2 bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-all px-8 py-3 rounded-lg font-bold text-lg">
+                <i class="fab fa-youtube"></i> Watch Build Logs
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-citrix-dark border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm">&copy; 2025 Team Citrix #31007. Engineering Division.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="text-gray-400 hover:text-citrix-accent"><i class="fab fa-github text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-citrix-accent"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/glow.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/reveal.js"></script>
+</body>
+</html>

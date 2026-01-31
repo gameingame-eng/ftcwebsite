@@ -78,8 +78,8 @@
       "id": "build-team",
       "children": [
         {
-          "label": "Coming Soon!",
-          "href": "../comingsoon.html",
+          "label": "About Build Team",
+          "href": "../buildteam/aboutbuildteam.html",
           "id": "about-build-team"
         }
       ]
