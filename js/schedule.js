@@ -56,6 +56,8 @@
         return "bg-blue-900/30 text-blue-400 border border-blue-500/30";
       case "Scheduled":
         return "bg-blue-900/30 text-blue-400 border border-blue-500/30";
+      case "Ongoing":
+        return "bg-yellow-900/30 text-yellow-400 border border-yellow-500/30";
       case "Target Goal":
         return "bg-purple-900/30 text-purple-400 border border-purple-500/30";
       default:
@@ -70,6 +72,8 @@
       case "Upcoming":
       case "Scheduled":
         return "border-white animate-pulse";
+      case "Ongoing":
+        return "border-yellow-400 shadow-[0_0_15px_rgba(234,179,8,0.5)] animate-pulse";
       case "Target Goal":
         return "border-gray-600";
       default:
