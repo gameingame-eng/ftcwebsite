@@ -25,5 +25,12 @@
     "title": "FiT-Central X-Stream League Tournament",
     "description": "This is our most important competition of the season. We will be competing against the best teams in our league to prove that we are the best of the best. We will give it our all and strive for excellence to reach Regionals.",
     "status": "Ongoing"
+  },
+  {
+    "date": "2026-02-28",
+    "type": "Invitational Tournament",
+    "title": "Lightsaders Rookie Invitational",
+    "description": "We are excited to participate in the Lightsaders Rookie Invitational. This will be a great opportunity to compete against other rookie teams and showcase our skills. We will prepare thoroughly and aim to perform at our best. This is not part of FIRST.",
+    "status": "Upcoming"
   }
 ]
