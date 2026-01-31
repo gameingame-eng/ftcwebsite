@@ -43,8 +43,8 @@
           "id": "about-coder-team"
         },
         {
-          "label": "More soon!",
-          "href": "../comingsoon.html",
+          "label": "Code Examples",
+          "href": "../programming/codexs.html",
           "id": "code-examples"
         }
       ]

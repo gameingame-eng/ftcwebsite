@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/header.js"></script>
+    <script src="js/glow.js"></script>
+    <title>Code Codex | Team Citrix #31007</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        citrix: {
+                            dark: '#0f172a',
+                            light: '#1e293b',
+                            accent: '#38bdf8', // Light blue/cyan
+                            hover: '#0ea5e9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'] // Tech-looking font for headers
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/glow.css">
+    <link rel="stylesheet" href="css/aboutcoderteam.css">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <style>
+        .hljs {
+            background-color: #0f172a !important;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+        
+        .code-block {
+            overflow-x: auto;
+        }
+        
+        .code-block code {
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .code-block code {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-citrix-dark text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-citrix-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/20">
+                        <img src="../img/logo.png" alt="Team Citrix logo">
+                    </div>
+                    <span class="tech-font text-xl md:text-2xl font-bold tracking-wider text-glow-blue">TEAM CITRIX<span class="text-citrix-accent"> #31007</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block desktop-menu-placeholder"></div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden hidden bg-citrix-light border-b border-gray-700 absolute w-full mobile-menu-placeholder"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background decorative blobs -->
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full z-0 pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div class="absolute top-20 right-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+            <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="reveal inline-block py-1 px-3 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6">CODE EXAMPLES</span>
+            <h1 class="reveal text-5xl md:text-7xl font-black tech-font mb-6 tracking-tight">
+                CODE <br><span class="text-gradient">CODEX</span>
+            </h1>
+            <p class="reveal mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+                Explore the implementation details of Team Citrix's robotics software with annotated code examples.
+            </p>
+        </div>
+    </header>
+
+    <!-- Code Examples Section -->
+    <section id="examples" class="py-20 bg-citrix-dark border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="reveal text-3xl md:text-4xl font-bold tech-font mb-4 section-header text-center">Code Examples</h2>
+            <p class="reveal text-gray-400 mb-12 max-w-2xl mx-auto text-center">
+                Dive into the codebase and understand how our robot is programmed for autonomous and teleop control.
+            </p>
+            
+            <div id="code-examples" class="space-y-8">
+                <!-- Code examples will be loaded here dynamically -->
+            </div>
+
+            <!-- Placeholder for no files message -->
+            <div id="no-files-message" class="reveal bg-citrix-light/50 rounded-xl p-8 border border-gray-700 text-center">
+                <i class="fas fa-code text-4xl text-citrix-accent mb-4"></i>
+                <p class="text-gray-300 text-lg">Java files in the codex/ directory will appear here.</p>
+                <p class="text-gray-400 text-sm mt-2">Add .java files to get started!</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-citrix-dark border-t border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    <p>&copy; 2025 Team Citrix #31007. All rights reserved.</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://www.youtube.com/@TeamCitrix" target="_blank" class="text-gray-400 hover:text-citrix-accent transition-colors">
+                        <i class="fab fa-youtube text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/gameingame-eng/ftcwebsite" target="_blank" class="text-gray-400 hover:text-citrix-accent transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/glow.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/loadcode.js"></script>
+    <script>
+    // Wait for the DOM, then call the function from the external file
+    document.addEventListener('DOMContentLoaded', () => {
+        loadCodeExamples();
+    });
+</script>
+</body>
+</html>
