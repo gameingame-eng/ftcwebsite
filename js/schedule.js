@@ -56,6 +56,10 @@
         return "bg-blue-900/30 text-blue-400 border border-blue-500/30";
       case "Scheduled":
         return "bg-blue-900/30 text-blue-400 border border-blue-500/30";
+      case "Passed":
+        return "bg-green-700 text-green-400 border border-gray-600";
+      case "Failed":
+        return "bg-red-900/30 text-red-400 border border-red-500/30";
       case "Ongoing":
         return "bg-yellow-900/30 text-yellow-400 border border-yellow-500/30";
       case "Target Goal":
@@ -70,8 +74,11 @@
       case "Completed":
         return "border-citrix-accent shadow-[0_0_15px_rgba(56,189,248,0.5)]";
       case "Upcoming":
+        return "border-citrix-accent shadow-[0_0_15px_rgba(56,189,248,0.5)] animate-pulse";
       case "Scheduled":
         return "border-white animate-pulse";
+      case "Failed":
+        return "border-red-400 shadow-[0_0_15px_rgba(239,68,68,0.5)] animate-pulse";
       case "Ongoing":
         return "border-yellow-400 shadow-[0_0_15px_rgba(234,179,8,0.5)] animate-pulse";
       case "Target Goal":
