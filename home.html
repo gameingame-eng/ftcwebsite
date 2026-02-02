@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Citrix #31007 | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        citrix: {
+                            dark: '#0f172a',
+                            light: '#1e293b',
+                            accent: '#38bdf8', // Light blue/cyan
+                            hover: '#0ea5e9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'] // Tech-looking font for headers
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/glow.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .tech-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.25);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-header {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #38bdf8;
+            border-radius: 2px;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+
+        /* Scroll Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+    </style>
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body class="bg-citrix-dark text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-citrix-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/20">
+                        <img src="img/logo.png" alt="Team Citrix logos">
+                    </div>
+                    <span class="tech-font text-xl md:text-2xl font-bold tracking-wider text-glow-blue">TEAM CITRIX<span class="text-citrix-accent"> #31007</span></span>
+                </div>
+                
+                <!-- Desktop Menu (Home link highlighted) -->
+                <div class="hidden md:block desktop-menu-placeholder"></div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel (Home link highlighted) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-citrix-light border-b border-gray-700 absolute w-full mobile-menu-placeholder"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
+        <!-- Background decorative blobs -->
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full z-0 pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div class="absolute top-20 right-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+            <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="reveal inline-block py-1 px-3 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6">FIRST Tech Challenge Team #31007</span>
+            <h1 class="reveal text-5xl md:text-7xl font-black tech-font mb-6 tracking-tight">
+                BUILDING THE <br><span class="text-gradient">FUTURE</span>
+            </h1>
+            <p class="reveal mt-4 max-w-2xl mx-auto text-xl text-gray-400 mb-10">
+                Team Citrix is a passionate group of students who enjoy programming and engineering and want to show their skills to the world.
+            </p>
+            <div class="reveal flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#about" class="bg-citrix-accent text-citrix-dark hover:bg-citrix-hover transition-all px-8 py-3 rounded-lg font-bold text-lg shadow-lg shadow-blue-500/25">
+                    Our Mission
+                </a>
+                <a href="https://www.youtube.com/@TeamCitrix" target="_blank" class="nav-link-glow border border-gray-600 hover:border-gray-400 hover:bg-white/5 transition-all px-8 py-3 rounded-lg font-bold text-lg flex items-center justify-center gap-2">
+                    <i class="fab fa-youtube text-red-500"></i> Our YouTube
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-citrix-light/10 border-t border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="text-left reveal">
+                        <h2 class="text-3xl md:text-4xl font-bold tech-font text-white mb-2">About Us</h2>
+                        <div class="w-20 h-1 bg-citrix-accent rounded-full"></div>
+                    </div>
+                    <p class="reveal text-gray-300 text-lg leading-relaxed">
+                        We are Team Citrix. Originating in Liberty Hill, Texas we are kids with brains. We have sucessfully managed to engineer and program our own robot named Tigger. We enjoy doing this and we are always open to challenges. 
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-8 reveal">
+                        <div class="bg-citrix-light p-4 rounded-lg border border-gray-700 text-center">
+                            <i class="fas fa-cogs text-3xl text-citrix-accent mb-2"></i>
+                            <h3 class="font-bold">Engineering</h3>
+                        </div>
+                        <div class="bg-citrix-light p-4 rounded-lg border border-gray-700 text-center">
+                            <i class="fas fa-code text-3xl text-citrix-accent mb-2"></i>
+                            <h3 class="font-bold">Programming</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative reveal">
+                    <div class="absolute inset-0 bg-citrix-accent/20 blur-3xl rounded-full"></div>
+                    <!-- Placeholder for a robot or team image -->
+                    <div class="relative bg-gray-800 rounded-xl overflow-hidden aspect-video border border-gray-700 shadow-2xl flex items-center justify-center group">
+                         <i class="text-6xl text-gray-600 group-hover:text-citrix-accent transition-colors duration-500"><img src="img/robot/robot.jpg" alt="Robot"></i>
+                         <p class="absolute bottom-4 text-gray-500 text-sm"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gamerules" class="py-24 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-blue-600/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold tech-font text-white mb-6">What is <span class="text-gradient">FTC DECODE?</span></h2>
+                <picture>
+                    <source type="image/webp" srcset="img/decode.webp">
+                    <img src="decode.jpg" alt="FIRST Tech Challenge Logo" class="mx-auto mb-6 w-48 h-auto">
+                </picture>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    The following is a summary of FIRST Tech Challenge DECODE, the 2025-2026 season game.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-citrix-light/40 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-citrix-accent/50 transition-all duration-300 card-hover reveal group">
+                    <div class="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors">
+                        <i class="fa-solid fa-robot text-2xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tech-font mb-4 text-white">Auto (30 seconds)</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Robots autonomously score points and move around with no driver input.
+                    </p>
+                </div>
+
+                <div class="bg-citrix-light/40 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-citrix-accent/50 transition-all duration-300 card-hover reveal group" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition-colors">
+                        <i class="fa-solid fa-gamepad text-2xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tech-font mb-4 text-white">TeleOp (2 minutes)</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        TeleOp is when drivers control their robots to score points, move, and empty the classifier.
+                    </p>
+                </div>
+
+                <div class="bg-citrix-light/40 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 hover:border-citrix-accent/50 transition-all duration-300 card-hover reveal group" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500/20 transition-colors">
+                        <i class="fa-solid fa-stopwatch-20"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tech-font mb-4 text-white">Endgame</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Endgame is the last 20 seconds of Teleop when robots reace to their parking spots to get a full or partial park.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-12 reveal">
+                <a href="aboutftc.html" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-citrix-accent transition-colors font-medium border-b border-transparent hover:border-citrix-accent pb-0.5">
+                    Learn more <i class="fas fa-external-link-alt text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- YouTube Section -->
+<!-- <section id="youtube" class="py-20 bg-citrix-light/10 border-t border-gray-800/50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <h2 id="video-title" class="tech-font text-3xl md:text-4xl font-bold mb-6 text-gradient"></h2>
+      <p id="video-description" class="text-gray-400 mb-10"></p>
+      <div class="flex justify-center">
+<div class="video-container relative pb-[56.25%] h-0 overflow-hidden shadow-2xl rounded-lg reveal-bottom max-w-4xl mx-auto">
+    <iframe id="video-iframe" class="absolute top-0 left-0 w-full h-full border-none" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+      </div>
+  </div>
+</section> -->
+
+
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center reveal">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
+                         <div class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-xs font-bold"><img src="img/logo.png" alt="C"></div>
+                         <span class="tech-font text-xl font-bold text-glow-blue">TEAM CITRIX</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Inspiring the next generation of engineers and programmers through FIRST Tech Challenge.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.youtube.com/@TeamCitrix" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors text-2xl">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="mailto:teamcitrix31007@gmail.com" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/teamcitrix31007/" target="_blank" class="text-gray-400 hover:text-pink-500 transition-colors text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // Placeholder for when images fail to load
+        const fallbackImage = "https://ui-avatars.com/api/?background=1e293b&color=38bdf8&font-size=0.4&name=";
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Initialize Scroll Animation
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+        }
+
+        ///// Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // No renderTeam here as index doesn't have the grid, but we init animations i am steve
+            initScrollAnimations();
+        });
+    </script>
+    <script type="module">
+  async function loadVideoData() {
+    try {
+      const response = await fetch('json/video.json');
+      const data = await response.json();
+
+      document.getElementById('video-title').textContent = data.title;
+      document.getElementById('video-description').textContent = data.description;
+      document.getElementById('video-iframe').src = data.embedUrl;
+    } catch (error) {
+      console.error("Error loading video data:", error);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', loadVideoData);
+
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+</script>
+<script src="init.js"></script>
+
+</script>
+    <script src="js/glow.js" defer></script>
+    <script src="js/header.js" defer></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- hi
+
+
+
+
+i like trains
+
+
+
+
+-->
+
+
+

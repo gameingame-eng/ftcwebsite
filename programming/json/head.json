@@ -2,7 +2,7 @@
   "navItems": [
     {
       "label": "Home",
-      "href": "../index.html",
+      "href": "../home.html",
       "id": "home"
     },
     {
