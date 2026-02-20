@@ -5,27 +5,20 @@
       "season": "2025-2026",
       "name": "Team Citrix DECODE 25-26 Schedule",
       "date": "2025-09-01",
-      "status": "current",
-      "link": "Team Citrix DECODE 25-26 Schedule.pdf",
+      "status": "archive",
+      "type": "season",
+      "link": "database/Team Citrix DECODE 25-26 Schedule.pdf",
       "description": "Current FiT-Central X-Stream League schedule for the 2025-2026 season"
     },
     {
-      "id": 2,
-      "season": "2024-2025",
-      "name": "Team Citrix CENTERSTAGE Schedule",
-      "date": "2024-09-01",
-      "status": "archive",
-      "link": "#",
-      "description": "Previous season schedule - CENTERSTAGE (2024-2025)"
-    },
-    {
-      "id": 3,
-      "season": "2023-2024",
-      "name": "Team Citrix POWERPLAY Schedule",
-      "date": "2023-09-01",
-      "status": "archive",
-      "link": "#",
-      "description": "Previous season schedule - POWERPLAY (2023-2024)"
+        "id": 2,
+        "season": "2026",
+        "name": "2026 offseason",
+        "date": "2026-02-28",
+        "status": "current",
+        "type": "offseason",
+        "link": null,
+        "description": "Our schedule for the 2026 offseason, including invitational tournaments and scrimmages. This is not part of FIRST."
     }
   ]
 }

@@ -24,13 +24,20 @@ function renderSchedules() {
     const container = document.getElementById('scheduleContainer');
     const emptyState = document.getElementById('emptyState');
 
-    // Filter schedules based on current filter
-    const filteredSchedules = schedules.filter(schedule => {
+    // 1. Filter schedules based on current selection
+    let filteredSchedules = schedules.filter(schedule => {
         if (currentFilter === 'all') return true;
-        if (currentFilter === 'current') return schedule.status === 'current';
-        if (currentFilter === 'archive') return schedule.status === 'archive';
-        return true;
+        return schedule.status === currentFilter;
     });
+
+    // 2. Sort: Move 'current' to the top if we are viewing 'all'
+    if (currentFilter === 'all') {
+        filteredSchedules.sort((a, b) => {
+            if (a.status === 'current' && b.status !== 'current') return -1;
+            if (a.status !== 'current' && b.status === 'current') return 1;
+            return 0; // Keep original order for same-status items
+        });
+    }
 
     if (filteredSchedules.length === 0) {
         container.innerHTML = '';
@@ -50,7 +57,13 @@ function renderSchedules() {
 /**
  * Create HTML card for a schedule
  */
+/**
+ * Create HTML card for a schedule
+ */
 function createScheduleCard(schedule) {
+    // Logic for Type: Season vs Offseason
+    const typeDisplay = schedule.type === 'offseason' ? 'Offseason' : 'Season';
+
     const statusBadge = schedule.status === 'current' 
         ? '<span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-green-500/20 border border-green-500/50 text-green-400">CURRENT</span>'
         : '<span class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-gray-500/20 border border-gray-500/50 text-gray-400">ARCHIVE</span>';
@@ -65,16 +78,16 @@ function createScheduleCard(schedule) {
         ? `<a href="${schedule.link}" download class="inline-flex items-center gap-2 px-4 py-2 bg-citrix-accent text-citrix-dark font-semibold rounded-lg hover:bg-citrix-hover transition-colors">
              <i class="fas fa-download"></i> Download PDF
            </a>`
-        : '<button class="inline-flex items-center gap-2 px-4 py-2 bg-gray-600 text-gray-300 font-semibold rounded-lg cursor-not-allowed" disabled>
+        : `<button class="inline-flex items-center gap-2 px-4 py-2 bg-gray-600 text-gray-300 font-semibold rounded-lg cursor-not-allowed" disabled>
              <i class="fas fa-file"></i> Not Available
-           </button>';
+           </button>`;
 
     return `
         <div class="schedule-card bg-gradient-to-br from-citrix-light to-citrix-dark border border-gray-700 rounded-xl p-6 hover:border-citrix-accent transition-all duration-300 shadow-lg hover:shadow-citrix-accent/20">
             <div class="flex items-start justify-between mb-4">
                 <div>
                     <h3 class="text-2xl font-bold tech-font mb-2">${schedule.name}</h3>
-                    <p class="text-gray-400 text-sm">Season: ${schedule.season}</p>
+                    <p class="text-gray-400 text-sm">Type: ${typeDisplay}</p>
                 </div>
                 ${statusBadge}
             </div>
@@ -88,8 +101,8 @@ function createScheduleCard(schedule) {
 
             <div class="flex gap-3">
                 ${downloadLink}
-                <button class="inline-flex items-center gap-2 px-4 py-2 border border-citrix-accent text-citrix-accent font-semibold rounded-lg hover:bg-citrix-accent/10 transition-colors schedule-edit-btn" data-schedule-id="${schedule.id}">
-                    <i class="fas fa-edit"></i> Edit
+                <button class="inline-flex items-center gap-2 px-4 py-2 border border-citrix-accent text-citrix-accent font-semibold rounded-lg hover:bg-citrix-accent/10 transition-colors schedule-view-btn" data-schedule-id="${schedule.id}">
+                    <i class="fas fa-folder-open"></i> View
                 </button>
             </div>
         </div>
