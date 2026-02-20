@@ -1,0 +1,91 @@
+{
+  "navItems": [
+    {
+      "label": "Home",
+      "href": "../../home.html",
+      "id": "home"
+    },
+    {
+      "label": "Roster",
+      "href": "../../teamembers.html",
+      "id": "team-members"
+    },
+    {
+      "label": "Outreach",
+      "id": "outreach",
+      "type": "dropdown",
+      "children": [
+        {
+          "label": "Sponsors",
+          "href": "../../outreach/sponsors.html",
+          "id": "sponsors"
+        },
+        {
+          "label": "YouTube",
+          "href": "../../outreach/yt.html",
+          "id": "yt"
+        },
+        {
+          "label": "About Outreach",
+          "href": "../../outreach/aboutoutreach.html",
+          "id": "about-outreach"
+        }
+      ]
+    },
+    {
+      "label": "Programming",
+      "id": "programming",
+      "type": "dropdown",
+      "children": [
+        {
+          "label": "About Coder Team",
+          "href": "../../programming/aboutcoderteam.html",
+          "id": "about-coder-team"
+        },
+        {
+          "label": "Code Examples",
+          "href": "../../programming/codexs.html",
+          "id": "code-examples"
+        }
+      ]
+    },
+    {
+      "label": "FTC",
+      "id": "ftc",
+      "type": "dropdown",
+      "children": [
+        {
+          "label": "Schedule",
+          "href": "../../schedule.html",
+          "id": "schedule"
+        },
+        {
+          "label": "About FTC",
+          "href": "../../aboutftc.html",
+          "id": "about-ftc"
+        },
+        {
+          "label": "Robot",
+          "href": "../../robot.html",
+          "id": "robot"
+        }
+      ]
+    },
+    {
+      "label": "Build",
+      "type": "dropdown",
+      "id": "build-team",
+      "children": [
+        {
+          "label": "About Build Team",
+          "href": "../../buildteam/aboutbuildteam.html",
+          "id": "about-build-team"
+        }
+      ]
+    }
+  ],
+  "ctaButton": {
+    "label": "Contact Us",
+    "href": "../../outreach/sponsors.html#contact"
+  }
+}

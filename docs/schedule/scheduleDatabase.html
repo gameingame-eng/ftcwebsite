@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Citrix #31007 | Schedule Database</title>
+    <script src="../../js/glow.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/scheduleDatabase.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        citrix: {
+                            dark: '#0f172a',
+                            light: '#1e293b',
+                            accent: '#38bdf8',
+                            hover: '#0ea5e9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/glow.css">
+    <link rel="icon" type="image/png" href="../../img/logo.png">
+</head>
+<body class="bg-citrix-dark text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-citrix-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-500/20">
+                        <img src="../../img/logo.png" alt="C">
+                    </div>
+                    <span class="tech-font text-xl md:text-2xl font-bold tracking-wider text-glow-blue">TEAM CITRIX <span class="text-citrix-accent tech-font">#31007</span></span>
+                </div>
+                
+                <div class="hidden md:block desktop-menu-placeholder"></div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-citrix-light border-b border-gray-700 absolute w-full mobile-menu-placeholder"></div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="relative pt-32 pb-16 overflow-hidden">
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full z-0 pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div class="absolute top-20 right-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="reveal inline-block py-1 px-3 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-sm font-semibold mb-6">SCHEDULE ARCHIVE</span>
+            <h1 class="reveal text-5xl md:text-7xl font-black tech-font mb-6 tracking-tight">
+                SCHEDULE <span class="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">DATABASE</span>
+            </h1>
+            <p class="reveal mt-4 max-w-2xl mx-auto text-xl text-gray-400">
+                Access current and previous season schedules for Team Citrix #31007.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Filter Controls -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-12 items-center justify-center reveal">
+                <button id="filterAll" class="filter-btn active px-6 py-2 rounded-full font-semibold transition-all bg-citrix-accent text-citrix-dark hover:bg-citrix-hover">
+                    All Schedules
+                </button>
+                <button id="filterCurrent" class="filter-btn px-6 py-2 rounded-full font-semibold transition-all border border-citrix-accent text-citrix-accent hover:bg-citrix-accent/10">
+                    Current
+                </button>
+                <button id="filterArchive" class="filter-btn px-6 py-2 rounded-full font-semibold transition-all border border-citrix-accent text-citrix-accent hover:bg-citrix-accent/10">
+                    Archive
+                </button>
+            </div>
+
+            <!-- Schedule List Container -->
+            <div id="scheduleContainer" class="grid md:grid-cols-2 lg:grid-cols-1 gap-6">
+                <!-- Schedules will be loaded here by JavaScript -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="text-center py-16 hidden">
+                <i class="fas fa-inbox text-6xl text-gray-600 mb-4"></i>
+                <p class="text-gray-400 text-lg">No schedules found.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center reveal">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <div class="flex items-center gap-2 justify-center md:justify-start mb-2">
+                        <div class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-xs font-bold"><img src="../../img/logo.png" alt="C"></div>
+                        <span class="tech-font text-xl font-bold">TEAM CITRIX</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Inspiring the next generation of engineers through FIRST Tech Challenge.</p>
+                </div>
+                
+                <div class="hidden md:flex flex-col text-sm text-gray-500 space-y-2 mr-8">
+                    <span class="font-bold text-gray-300">Quick Links</span>
+                    <a href="../../index.html" class="hover:text-citrix-accent">Home</a>
+                    <a href="../../schedule.html" class="hover:text-citrix-accent">Schedule</a>
+                    <a href="../../robot.html" class="hover:text-citrix-accent">Robot</a>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="https://www.youtube.com/@TeamCitrix" target="_blank" class="text-gray-400 hover:text-red-500 transition-colors text-2xl">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://ftc-events.firstinspires.org/2025/team/31007" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                        <i class="fa-duotone fa-solid fa-robot"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-pink-500 transition-colors text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:teamcitrix31007@gmail.com" class="text-gray-400 hover:text-blue-600 transition-colors text-2xl">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scheduleDatabase.js" defer></script>
+    <script src="../../js/header.js" defer></script>
+</body>
+</html>
