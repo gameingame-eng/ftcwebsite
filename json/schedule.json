@@ -1,39 +1,5 @@
 [
   {
-    "date": "2025-11-08",
-    "type": "League Meet",
-    "title": "FiT-Central X-Stream League B Meet 1",
-    "description": "We competed in 5 qualification matches, ending with a record of 2-3-0. A great learning experience to kick off the competition season.",
-    "status": "Completed"
-  },
-  {
-    "date": "2025-12-06",
-    "type": "League Meet",
-    "title": "FiT-Central X-Stream League B Meet 2",
-    "description": "We competed in 5 qualification matches, and we ended with a record of 2-2-1. After this comp, we will add better wheels and setup android studio. We did well, and we will strive to be better.",
-    "status": "Completed"
-},
-  {
-    "date": "2026-01-10",
-    "type": "League Meet",
-    "title": "FiT-Central X-Stream League B Meet 3",
-    "description": "This match, we realized something. Ranking points are really important. We ended with a record of 2-3-0, but we increased our RP count to 15 and across our best 10 matches our record is 6-3-1. We will continue to improve for the League Tournament."
-  },
-  {
-    "date": "2026-01-31",
-    "type": "League Tournament",
-    "title": "FiT-Central X-Stream League Tournament",
-    "description": "We failed this time. That doesn't mean we will give up. That just means we will try harder, build better, and come back stronger next time.",
-    "status": "Failed"
-  },
-  {
-    "date": "2026-02-21",
-    "type": "League Tournament",
-    "title": "Last Call Qualifier",
-    "description": "We are excited to compete in the Last Call Qualifier. This will be a great opportunity to showcase our skills and compete against other teams. We will prepare thoroughly and aim to perform at our best. 3 teams will go to regionals, and we will do our best to be one of them.",
-    "status": "Upcoming"
-  },
-  {
     "date": "2026-02-28",
     "type": "Invitational Tournament",
     "title": "Lightsaders Rookie Invitational",
