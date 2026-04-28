@@ -42,9 +42,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-        - language: java-kotlin
-          build-mode: none # This mode only analyzes Java. Set this to 'autobuild' or 'manual' to analyze Kotlin too.
+        include: 
         - language: javascript-typescript
           build-mode: none
         - language: python
