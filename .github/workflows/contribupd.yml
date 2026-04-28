@@ -1,23 +1,18 @@
 name: Update CONTRIBUTORS file
 on:
-  push:
-    paths:
-      - ftcwebsite/.github/workflows/contribupd.yml
-  schedule:
-    - cron: "0 0 * * 0-6"
-  workflow_dispatch:
+    push:
+        branches:
+            - main
+
 jobs:
-  main:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: minicli/action-contributors@v3.2.3
-        name: "Update a projects CONTRIBUTORS file"
-        env:
-          CONTRIB_REPOSITORY: 'minicli/minicli'
-          CONTRIB_OUTPUT_FILE: 'CONTRIBUTORS.md'
-      - name: Commit changes
-        uses: test-room-7/action-update-file@v1
-        with:
-          file-path: 'CONTRIBUTORS.md'
-          commit-msg: Update Contributors
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+    contrib-readme-job:
+        runs-on: ubuntu-latest
+        name: A job to automate contrib in readme
+        permissions:
+          contents: write
+          pull-requests: write
+        steps:
+            - name: Contribute List
+              uses: akhilmhdh/contributors-readme-action@v2.3.11
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
